@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clacton On Tea</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@300;400;500;700&family=Google+Sans+Display:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="cur"></div>
+  <div id="ring"></div>
+  <nav>
+    <a href="#" class="logo">Clacton On Tea</a>
+    <ul class="nav-links">
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#order">Order</a></li>
+    </ul>
+    <div class="nav-r">
+      <span class="tlabel" id="tlbl">Light</span>
+      <div class="toggle" onclick="toggleTheme()">
+        <div class="knob"></div>
+      </div>
+      <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank" class="nav-btn">Order
+        Now</a>
+    </div>
+  </nav>
+  <section class="hero">
+    <div class="hero-l">
+      <div class="htag rv">16 Rosemary Rd, Clacton-on-Sea, CO15 1NZ</div>
+      <h1 class="htitle rv d1">Where Every<br><span class="out">Sip Feels</span><br>Like Home</h1>
+      <p class="hsub rv d2">Your cozy neighborhood spot for the perfect sip. Freshly roasted coffee, premium teas, and
+        moments worth sharing.</p>
+      <div class="hact rv d3">
+        <a href="#menu" class="btn-pri">Explore Menu</a>
+        <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank"
+          class="btn-ghost">Order Online <span class="arr">→</span></a>
+      </div>
+      <div class="hstats rv d4">
+        <div>
+          <div class="sn">75+</div>
+          <div class="sl">Menu Items</div>
+        </div>
+        <div>
+          <div class="sn">4.8</div>
+          <div class="sl">Rating</div>
+        </div>
+        <div>
+          <div class="sn">Friendly</div>
+          <div class="sl">Behaviour</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-r">
+      <img src="images/Coffee photo.jpg" alt="Clacton On Tea lifestyle" />
+      <div class="hero-overlay"></div>
+    </div>
+  </section>
+  <div class="mstrip">
+    <div class="mtrack">
+      <div class="mitem">Milk Tea <span class="mdot"></span> Fruit Tea <span class="mdot"></span> Matcha Latte <span
+          class="mdot"></span> Artisan Coffee <span class="mdot"></span> Fluffy Pancakes <span class="mdot"></span>
+        Caramel Pudding <span class="mdot"></span> Ice Cream <span class="mdot"></span> Bubble Tea <span
+          class="mdot"></span></div>
+      <div class="mitem">Milk Tea <span class="mdot"></span> Fruit Tea <span class="mdot"></span> Matcha Latte <span
+          class="mdot"></span> Artisan Coffee <span class="mdot"></span> Fluffy Pancakes <span class="mdot"></span>
+        Caramel Pudding <span class="mdot"></span> Ice Cream <span class="mdot"></span> Bubble Tea <span
+          class="mdot"></span></div>
+      <div class="mitem">Milk Tea <span class="mdot"></span> Fruit Tea <span class="mdot"></span> Matcha Latte <span
+          class="mdot"></span> Artisan Coffee <span class="mdot"></span> Fluffy Pancakes <span class="mdot"></span>
+        Caramel Pudding <span class="mdot"></span> Ice Cream <span class="mdot"></span> Bubble Tea <span
+          class="mdot"></span></div>
+      <div class="mitem">Milk Tea <span class="mdot"></span> Fruit Tea <span class="mdot"></span> Matcha Latte <span
+          class="mdot"></span> Artisan Coffee <span class="mdot"></span> Fluffy Pancakes <span class="mdot"></span>
+        Caramel Pudding <span class="mdot"></span> Ice Cream <span class="mdot"></span> Bubble Tea <span
+          class="mdot"></span></div>
+    </div>
+  </div>
+  <div class="gstrip" id="gallery">
+    <div class="gcell"><img src="images/Playcard 1.png" alt="Clacton On Tea" />
+      <div class="glabel">Our Vibe</div>
+    </div>
+    <div class="gcell"><img src="images/Playcard 2.png" alt="Take a Break" />
+      <div class="glabel">Take a Break</div>
+    </div>
+    <div class="gcell"><img src="images/Playcard 3.jpg" alt="Taste" />
+      <div class="glabel">Taste</div>
+    </div>
+  </div>
+  <section class="sec" id="menu">
+    <div class="sh rv">
+      <div>
+        <div class="slabel">Browse</div>
+        <h2 class="stitle">Categories</h2>
+      </div>
+    </div>
+    <div class="cgrid rv">
+      <div class="ci" onclick="filterMenu('pizza',null)"><span class="cicon">🍕</span>
+        <div class="cname">Pizza</div>
+        <div class="ccount">14 items</div><span class="ca">↗</span>
+      </div>
+      <div class="ci" onclick="filterMenu('burger',null)"><span class="cicon">🍔</span>
+        <div class="cname">Burgers</div>
+        <div class="ccount">8 items</div><span class="ca">↗</span>
+      </div>
+      <div class="ci" onclick="filterMenu('platter',null)"><span class="cicon">🍽️</span>
+        <div class="cname">Platters</div>
+        <div class="ccount">6 items</div><span class="ca">↗</span>
+      </div>
+      <div class="ci" onclick="filterMenu('drink',null)"><span class="cicon">🧃</span>
+        <div class="cname">Drinks</div>
+        <div class="ccount">20+ items</div><span class="ca">↗</span>
+      </div>
+      <div class="ci" onclick="filterMenu('combo',null)"><span class="cicon">📦</span>
+        <div class="cname">Combos</div>
+        <div class="ccount">5 items</div><span class="ca">↗</span>
+      </div>
+    </div>
+  </section>
+  <section class="sec" style="padding-top:0;" id="menuSection">
+    <div class="sh rv">
+      <div>
+        <div class="slabel">What we make</div>
+        <h2 class="stitle">Our Menu</h2>
+      </div>
+    </div>
+    <div class="mfilter rv">
+      <button class="fb active" onclick="filterMenu('all',this)">All</button>
+      <button class="fb" onclick="filterMenu('pizza',this)">Pizza</button>
+      <button class="fb" onclick="filterMenu('burger',this)">Burgers</button>
+      <button class="fb" onclick="filterMenu('platter',this)">Platters</button>
+      <button class="fb" onclick="filterMenu('drink',this)">Drinks</button>
+      <button class="fb" onclick="filterMenu('combo',this)">Combos</button>
+    </div>
+    <div class="mgrid" id="mg">
+      <div class="mc" data-cat="pizza">
+        <div class="cimg cimg-ai">
+          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80"
+            alt="BBQ Meat Machine Pizza" loading="lazy"
+            onerror="this.parentElement.innerHTML='<div class=cph-fall>🍕</div>'" />
+          <span class="ai-badge">AI Photo</span>
+        </div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge">Popular</span><span class="cprice">Tk 335+</span></div>
+          <div class="cname">BBQ Meat Machine Pizza</div>
+          <div class="cdesc">Beef &amp; chicken, freshly cut vegetables, cheese &amp; soft dough.</div>
+        </div>
+        <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank"
+          class="cadd"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+      <div class="mc" data-cat="pizza">
+        <div class="cimg cimg-ai">
+          <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=600&q=80" alt="Meat Masala Pizza"
+            loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>🍕</div>'" />
+          <span class="ai-badge">AI Photo</span>
+        </div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge">Popular</span><span class="cprice">Tk 335+</span></div>
+          <div class="cname">Meat Masala Pizza</div>
+          <div class="cdesc">Lots of meat. Lots of spice. A carnivore's dream.</div>
+        </div>
+        <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank"
+          class="cadd"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+      <div class="mc" data-cat="pizza">
+        <div class="cimg cimg-ai">
+          <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600&q=80" alt="Kebab Cocktail Pizza"
+            loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>🍕</div>'" />
+          <span class="ai-badge">AI Photo</span>
+        </div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge">Popular</span><span class="cprice">Tk 345+</span></div>
+          <div class="cname">Kebab Cocktail Pizza</div>
+          <div class="cdesc">5 types of chicken loaded with authentic kebab spice.</div>
+        </div>
+        <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank"
+          class="cadd"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+      <div class="mc" data-cat="pizza">
+        <div class="cimg cimg-ai">
+          <img src="https://images.unsplash.com/photo-1528137871618-79d2761e3fd5?w=600&q=80"
+            alt="Sausage Carnival Pizza" loading="lazy"
+            onerror="this.parentElement.innerHTML='<div class=cph-fall>🍕</div>'" />
+          <span class="ai-badge">AI Photo</span>
+        </div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge">Popular</span><span class="cprice">Tk 335+</span></div>
+          <div class="cname">Sausage Carnival Pizza</div>
+          <div class="cdesc">Big sausage, mushroom &amp; spice — a carnival on every slice.</div>
+        </div>
+        <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank"
+          class="cadd"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+      <div class="mc" data-cat="pizza">
+        <div class="cimg cimg-ai">
+          <img src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=600&q=80"
+            alt="The Everything Chicken Pizza" loading="lazy"
+            onerror="this.parentElement.innerHTML='<div class=cph-fall>🍕</div>'" />
+          <span class="ai-badge">AI Photo</span>
+        </div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge">Popular</span><span class="cprice">Tk 495+</span></div>
+          <div class="cname">The Everything Chicken Pizza</div>
+          <div class="cdesc">For the first-timer. Pick it once and get addicted forever.</div>
+        </div>
+        <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank"
+          class="cadd"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+      <div class="mc" data-cat="pizza">
+        <div class="cimg cimg-ai">
+          <img src="https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?w=600&q=80"
+            alt="Mac &amp; Cheese Pizza" loading="lazy"
+            onerror="this.parentElement.innerHTML='<div class=cph-fall>🍕</div>'" />
+          <span class="ai-badge">AI Photo</span>
+        </div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge hidden">·</span><span class="cprice">Tk 335+</span></div>
+          <div class="cname">Mac &amp; Cheese Pizza</div>
+          <div class="cdesc">Pasta, mixed cheese, corn, sausage &amp; chicken — indulgent fusion.</div>
+        </div>
+        <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank"
+          class="cadd"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+      <div class="mc" data-cat="pizza">
+        <div class="cimg cimg-ai">
+          <img src="https://images.unsplash.com/photo-1548369937-47519962c11a?w=600&q=80" alt="Cheddar Cream Pizza"
+            loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>🍕</div>'" />
+          <span class="ai-badge">AI Photo</span>
+        </div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge hidden">·</span><span class="cprice">Tk 325+</span></div>
+          <div class="cname">Cheddar Cream Pizza</div>
+          <div class="cdesc">Salty, cheesy, chicken. The cult favourite.</div>
+        </div>
+        <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank"
+          class="cadd"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+      <div class="mc" data-cat="pizza">
+        <div class="cimg cimg-ai">
+          <img src="https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=600&q=80" alt="Royal Silk Pizza"
+            loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>🍕</div>'" />
+          <span class="ai-badge">AI Photo</span>
+        </div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge hidden">·</span><span class="cprice">Tk 349+</span></div>
+          <div class="cname">Royal Silk Pizza</div>
+          <div class="cdesc">Thai basil, onions, tomatoes &amp; chicken keema — tangy kick.</div>
+        </div>
+        <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank"
+          class="cadd"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+      <div class="mc" data-cat="pizza">
+        <div class="cimg"><img src="images/image_4.jpeg" alt="Valentine's Special Pizza" loading="lazy" /></div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge hidden">·</span><span class="cprice">Tk 755+</span></div>
+          <div class="cname">Valentine's Special Pizza</div>
+          <div class="cdesc">12&quot; heart-shaped pizza with four flavors. Share the love.</div>
+        </div>
+        <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank"
+          class="cadd"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+      <div class="mc" data-cat="burger">
+        <div class="cimg cimg-ai">
+          <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80"
+            alt="Chicken Cheese Volcano" loading="lazy"
+            onerror="this.parentElement.innerHTML='<div class=cph-fall>🍕</div>'" />
+          <span class="ai-badge">AI Photo</span>
+        </div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge hidden">·</span><span class="cprice">Tk 339+</span></div>
+          <div class="cname">Chicken Cheese Volcano</div>
+          <div class="cdesc">Juicy chicken patty in soft buns with an explosion of cheese.</div>
+        </div>
+        <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank"
+          class="cadd"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+      <div class="mc" data-cat="burger">
+        <div class="cimg cimg-ai">
+          <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=600&q=80" alt="Beef Cheese Volcano"
+            loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>🍕</div>'" />
+          <span class="ai-badge">AI Photo</span>
+        </div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge hidden">·</span><span class="cprice">Tk 379+</span></div>
+          <div class="cname">Beef Cheese Volcano</div>
+          <div class="cdesc">Meaty beef patty, soft buns, molten cheese — pure indulgence.</div>
+        </div>
+        <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank"
+          class="cadd"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+      <div class="mc" data-cat="burger">
+        <div class="cimg cimg-ai">
+          <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=600&q=80" alt="Chicken Tongue Slayer"
+            loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>🍕</div>'" />
+          <span class="ai-badge">AI Photo</span>
+        </div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge hidden">·</span><span class="cprice">Tk 229+</span></div>
+          <div class="cname">Chicken Tongue Slayer</div>
+          <div class="cdesc">25% naga sauce. Cheesy. Not for the faint-hearted.</div>
+        </div>
+        <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank"
+          class="cadd"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+      <div class="mc" data-cat="burger">
+        <div class="cimg cimg-ai">
+          <img src="https://images.unsplash.com/photo-1561758033-d89a9ad46330?w=600&q=80" alt="BBQ Chicken Burger"
+            loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>🍕</div>'" />
+          <span class="ai-badge">AI Photo</span>
+        </div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge hidden">·</span><span class="cprice">Tk 219+</span></div>
+          <div class="cname">BBQ Chicken Burger</div>
+          <div class="cdesc">Juicy BBQ chicken, melty cheese &amp; BBQ sauce — classic.</div>
+        </div>
+        <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank"
+          class="cadd"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+      <div class="mc" data-cat="burger">
+        <div class="cimg cimg-ai">
+          <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=600&q=80" alt="Chicken Juicy Bomb"
+            loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>🍕</div>'" />
+          <span class="ai-badge">AI Photo</span>
+        </div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge hidden">·</span><span class="cprice">Tk 199+</span></div>
+          <div class="cname">Chicken Juicy Bomb</div>
+          <div class="cdesc">Juicy chicken patty with oozing cheese inside.</div>
+        </div>
+        <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank"
+          class="cadd"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+      <div class="mc" data-cat="burger">
+        <div class="cimg cimg-ai">
+          <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=600&q=80" alt="Beef Juicy Bomb"
+            loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>🍕</div>'" />
+          <span class="ai-badge">AI Photo</span>
+        </div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge hidden">·</span><span class="cprice">Tk 239+</span></div>
+          <div class="cname">Beef Juicy Bomb</div>
+          <div class="cdesc">Meaty beef patty with oozing cheese inside.</div>
+        </div>
+        <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank"
+          class="cadd"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+      <div class="mc" data-cat="platter">
+        <div class="cimg"><img src="images/image_5.jpeg" alt="Iftar Platter (Single)" loading="lazy" /></div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge hidden">·</span><span class="cprice">Tk 375</span></div>
+          <div class="cname">Iftar Platter (Single)</div>
+          <div class="cdesc">Mild spicy rice, chicken chaap, sausage, chili onion &amp; fruits.</div>
+        </div>
+        <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank"
+          class="cadd"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+      <div class="mc" data-cat="platter">
+        <div class="cimg"><img src="images/image_6.jpeg" alt="Premium Platter — 1" loading="lazy" /></div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge hidden">·</span><span class="cprice">Tk 749</span></div>
+          <div class="cname">Premium Platter — 1</div>
+          <div class="cdesc">2 pcs chicken chaap, aromatic rice, chili onion &amp; BBQ sausages with Cuban sauce.</div>
+        </div>
+        <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank"
+          class="cadd"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+      <div class="mc" data-cat="platter">
+        <div class="cimg"><img src="images/image_7.jpeg" alt="Premium Platter — 2" loading="lazy" /></div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge hidden">·</span><span class="cprice">Tk 375</span></div>
+          <div class="cname">Premium Platter — 2</div>
+          <div class="cdesc">Chicken chaap, aromatic rice &amp; BBQ sausages with green chili sauce.</div>
+        </div>
+        <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank"
+          class="cadd"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+      <div class="mc" data-cat="platter">
+        <div class="cimg"><img src="images/image_8.jpeg" alt="Fat Boy" loading="lazy" /></div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge hidden">·</span><span class="cprice">Tk 319+</span></div>
+          <div class="cname">Fat Boy</div>
+          <div class="cdesc">Fried rice, 3 pcs chicken lollipop, chili onion, salad &amp; chutney.</div>
+        </div>
+        <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank"
+          class="cadd"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+      <div class="mc" data-cat="drink">
+        <div class="cimg cimg-ai">
+          <img src="images/Coffee photo.jpg" alt="Killer Latte" loading="lazy"
+            onerror="this.parentElement.innerHTML='<div class=cph-fall>🍕</div>'" />
+          <span class="ai-badge">AI Photo</span>
+        </div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge hidden">·</span><span class="cprice">Tk 349</span></div>
+          <div class="cname">Killer Latte</div>
+          <div class="cdesc">Artfully crafted latte with smooth foam and rich espresso.</div>
+        </div>
+        <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank"
+          class="cadd"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+      <div class="mc" data-cat="drink">
+        <div class="cimg cimg-ai">
+          <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600&q=80" alt="Hazelnut Iced Latte"
+            loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>🍕</div>'" />
+          <span class="ai-badge">AI Photo</span>
+        </div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge hidden">·</span><span class="cprice">Tk 349</span></div>
+          <div class="cname">Hazelnut Iced Latte</div>
+          <div class="cdesc">Espresso, milk, ice &amp; hazelnut — cool &amp; nutty.</div>
+        </div>
+        <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank"
+          class="cadd"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+      <div class="mc" data-cat="drink">
+        <div class="cimg cimg-ai">
+          <img src="https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=600&q=80" alt="Lemon Mint Mojito"
+            loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>🍕</div>'" />
+          <span class="ai-badge">AI Photo</span>
+        </div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge hidden">·</span><span class="cprice">Tk 249</span></div>
+          <div class="cname">Lemon Mint Mojito</div>
+          <div class="cdesc">Fresh lemon &amp; mint for a cool, zesty mocktail.</div>
+        </div>
+        <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank"
+          class="cadd"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+      <div class="mc" data-cat="combo">
+        <div class="cimg cimg-ai">
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80" alt="Couple Combo"
+            loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>🍕</div>'" />
+          <span class="ai-badge">AI Photo</span>
+        </div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge hidden">·</span><span class="cprice">Tk 549</span></div>
+          <div class="cname">Couple Combo</div>
+          <div class="cdesc">Personal pizza, BBQ sausage, mushroom &amp; 4 pcs chicken lollipop.</div>
+        </div>
+        <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank"
+          class="cadd"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+      <div class="mc" data-cat="combo">
+        <div class="cimg cimg-ai">
+          <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&q=80" alt="Group Combo"
+            loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>🍕</div>'" />
+          <span class="ai-badge">AI Photo</span>
+        </div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge hidden">·</span><span class="cprice">Tk 1,099+</span></div>
+          <div class="cname">Group Combo</div>
+          <div class="cdesc">9&quot; meaty onion pizza, fried rice, chili onion &amp; 8 pcs chicken wings.</div>
+        </div>
+        <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank"
+          class="cadd"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+    </div>
+  </section>
+
+  <div class="phil">
+    <div class="phil-l">
+      <div class="pnum rv">01</div>
+      <h2 class="ph rv d1">Our Craft<br>Philosophy</h2>
+      <p class="pb rv d2">Every sip is a handcrafted experience. From the finest tea leaves to the creamiest milk, we
+        believe that quality and comfort go hand in hand.</p>
+    </div>
+    <div class="phil-r">
+      <div class="pp rv">
+        <div class="ppn">— 001</div>
+        <div class="ppt">Steeped with Care</div>
+        <div class="pptx">We treat every leaf with respect, ensuring the perfect balance of flavor and aroma in every
+          cup.</div>
+      </div>
+      <div class="pp rv d2">
+        <div class="ppn">— 002</div>
+        <div class="ppt">Honestly Wholesome</div>
+        <div class="pptx">No shortcuts, just real ingredients. We source the best so you can taste the difference.</div>
+      </div>
+    </div>
+  </div>
+  <section class="ord" id="order">
+    <div class="ord-l">
+      <div class="slabel">Ready?</div>
+      <h2 class="otitle">Order<br>Right Now</h2>
+      <p class="osub">Available for takeaway and delivery. Get your favorites delivered across Clacton-on-Sea.</p>
+      <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank" class="btn-dk">Order
+        on Foodpanda</a>
+    </div>
+    <div class="ord-r">
+      <div class="slabel" style="margin-bottom:8px;">Good to know</div>
+      <div class="oi"><span class="oic">📍</span>
+        <div>
+          <div class="oit">Location</div>
+          <div class="oix">16 Rosemary Rd, Clacton-on-Sea, CO15 1NZ</div>
+        </div>
+      </div>
+      <div class="oi"><span class="oic">🛵</span>
+        <div>
+          <div class="oit">Delivery</div>
+          <div class="oix">Fast delivery across Clacton-on-Sea and surrounding areas</div>
+        </div>
+      </div>
+      <div class="oi"><span class="oic">🕐</span>
+        <div>
+          <div class="oit">Hours</div>
+          <div class="oix">Open daily — check Foodpanda for live availability</div>
+        </div>
+      </div>
+      <div class="oi"><span class="oic">💳</span>
+        <div>
+          <div class="oit">Payment</div>
+          <div class="oix">Cash on delivery, cards — all accepted</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="ftop">
+      <div>
+        <div class="fbrand">Clacton On Tea</div>
+        <div class="ftag">Bold flavors, honest ingredients, unforgettable meals — crafted in Clacton-on-Sea.</div>
+      </div>
+      <div>
+        <div class="fct">Menu</div>
+        <ul class="flinks">
+          <li><a href="#menu">Milk Tea</a></li>
+          <li><a href="#menu">Fruit Tea</a></li>
+          <li><a href="#menu">Matcha</a></li>
+          <li><a href="#menu">Coffee</a></li>
+          <li><a href="#menu">Pancakes</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="fct">Info</div>
+        <ul class="flinks">
+          <li><a href="#order">Order</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#menu">Full Menu</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="fct">Connect</div>
+        <ul class="flinks">
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fbot">
+      <div class="fcp">© 2026 Clacton On Tea. Clacton-on-Sea, United Kingdom.</div>
+      <div class="fsoc"><a href="#">Instagram</a><a href="#">Facebook</a><a href="#">TikTok</a></div>
+    </div>
+  </footer>
+  <div class="toast" id="toast"></div>
+  <script src="main.js"></script>
+</body>
+
+</html>

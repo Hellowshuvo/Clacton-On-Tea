@@ -1,0 +1,12 @@
+{
+  "name": "clacton-on-tea",
+  "version": "1.0.0",
+  "description": "Clacton On Tea Website",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx browser-sync start --server --files '*.html, *.css, *.js' --no-notify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
