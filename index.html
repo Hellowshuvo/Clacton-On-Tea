@@ -81,7 +81,7 @@
           class="mdot"></span></div>
     </div>
   </div>
-  <div class="gstrip" id="gallery">
+  <div class="gstrip gstrip-orig" id="gallery">
     <div class="gcell"><img src="images/Playcard 1.png" alt="Clacton On Tea" />
       <div class="glabel">Our Vibe</div>
     </div>
@@ -92,50 +92,45 @@
       <div class="glabel">Taste</div>
     </div>
   </div>
-  <section class="sec" id="menu">
-    <div class="sh rv">
-      <div>
-        <div class="slabel">Browse</div>
-        <h2 class="stitle">Categories</h2>
-      </div>
-    </div>
-    <div class="cgrid rv">
-      <div class="ci" onclick="filterMenu('pizza',null)"><span class="cicon">🍕</span>
-        <div class="cname">Pizza</div>
-        <div class="ccount">14 items</div><span class="ca">↗</span>
-      </div>
-      <div class="ci" onclick="filterMenu('burger',null)"><span class="cicon">🍔</span>
-        <div class="cname">Burgers</div>
-        <div class="ccount">8 items</div><span class="ca">↗</span>
-      </div>
-      <div class="ci" onclick="filterMenu('platter',null)"><span class="cicon">🍽️</span>
-        <div class="cname">Platters</div>
-        <div class="ccount">6 items</div><span class="ca">↗</span>
-      </div>
-      <div class="ci" onclick="filterMenu('drink',null)"><span class="cicon">🧃</span>
-        <div class="cname">Drinks</div>
-        <div class="ccount">20+ items</div><span class="ca">↗</span>
-      </div>
-      <div class="ci" onclick="filterMenu('combo',null)"><span class="cicon">📦</span>
-        <div class="cname">Combos</div>
-        <div class="ccount">5 items</div><span class="ca">↗</span>
-      </div>
-    </div>
-  </section>
-  <section class="sec" style="padding-top:0;" id="menuSection">
+  <section class="sec" id="menu" id="menuSection">
     <div class="sh rv">
       <div>
         <div class="slabel">What we make</div>
         <h2 class="stitle">Our Menu</h2>
       </div>
     </div>
-    <div class="mfilter rv">
-      <button class="fb active" onclick="filterMenu('all',this)">All</button>
-      <button class="fb" onclick="filterMenu('pizza',this)">Pizza</button>
-      <button class="fb" onclick="filterMenu('burger',this)">Burgers</button>
-      <button class="fb" onclick="filterMenu('platter',this)">Platters</button>
-      <button class="fb" onclick="filterMenu('drink',this)">Drinks</button>
-      <button class="fb" onclick="filterMenu('combo',this)">Combos</button>
+    <!-- Unified category chips -->
+    <div class="cat-chips rv">
+      <button class="chip chip-all active" onclick="filterMenu('all',this)" data-cat="all">
+        <span class="chip-icon">🍽️</span>
+        <span class="chip-label">All</span>
+        <span class="chip-count">53+ items</span>
+      </button>
+      <button class="chip" onclick="filterMenu('pizza',this)" data-cat="pizza">
+        <span class="chip-icon">🍕</span>
+        <span class="chip-label">Pizza</span>
+        <span class="chip-count">14 items</span>
+      </button>
+      <button class="chip" onclick="filterMenu('burger',this)" data-cat="burger">
+        <span class="chip-icon">🍔</span>
+        <span class="chip-label">Burgers</span>
+        <span class="chip-count">8 items</span>
+      </button>
+      <button class="chip" onclick="filterMenu('platter',this)" data-cat="platter">
+        <span class="chip-icon">🥘</span>
+        <span class="chip-label">Platters</span>
+        <span class="chip-count">6 items</span>
+      </button>
+      <button class="chip" onclick="filterMenu('drink',this)" data-cat="drink">
+        <span class="chip-icon">🧃</span>
+        <span class="chip-label">Drinks</span>
+        <span class="chip-count">20+ items</span>
+      </button>
+      <button class="chip" onclick="filterMenu('combo',this)" data-cat="combo">
+        <span class="chip-icon">📦</span>
+        <span class="chip-label">Combos</span>
+        <span class="chip-count">5 items</span>
+      </button>
     </div>
     <div class="mgrid" id="mg">
       <div class="mc" data-cat="pizza">
@@ -460,7 +455,29 @@
           class="cadd"><span>Add to Order</span><span class="ci-btn">+</span></a>
       </div>
     </div>
+    <!-- Mobile show-more button (only shown on mobile when "all" is selected) -->
+    <div class="show-more-wrap" id="showMoreWrap">
+      <button class="show-more-btn" id="showMoreBtn" onclick="toggleShowMore()">
+        <span id="showMoreTxt">Show all items</span>
+        <span class="show-more-arrow" id="showMoreArrow">↓</span>
+      </button>
+    </div>
   </section>
+
+  <!-- Mobile-only: gallery relocated below menu -->
+  <div class="mob-media-below">
+    <div class="gstrip gstrip-mob" id="gallery-mob">
+      <div class="gcell"><img src="images/Playcard 1.png" alt="Clacton On Tea" loading="lazy" />
+        <div class="glabel">Our Vibe</div>
+      </div>
+      <div class="gcell"><img src="images/Playcard 2.png" alt="Take a Break" loading="lazy" />
+        <div class="glabel">Take a Break</div>
+      </div>
+      <div class="gcell"><img src="images/Playcard 3.jpg" alt="Taste" loading="lazy" />
+        <div class="glabel">Taste</div>
+      </div>
+    </div>
+  </div>
 
   <div class="phil">
     <div class="phil-l">
