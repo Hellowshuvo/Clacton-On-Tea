@@ -110,3 +110,47 @@ function closeMobileMenu() {
   }
 }
 
+/* ── Image Lightbox ── */
+function openLightbox(imgSrc, caption) {
+  var lb = document.getElementById('imgLightbox');
+  var lbImg = document.getElementById('lightboxImg');
+  var lbCap = document.getElementById('lightboxCaption');
+  if (!lb || !lbImg) return;
+  lbImg.src = imgSrc;
+  if (lbCap) lbCap.textContent = caption || '';
+  lb.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+  var lb = document.getElementById('imgLightbox');
+  if (!lb) return;
+  lb.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+// Click on menu card thumbnails to open lightbox
+document.addEventListener('click', function(e) {
+  var cimg = e.target.closest('.mgrid .cimg');
+  if (cimg) {
+    var img = cimg.querySelector('img');
+    if (!img) return;
+    var src = img.src;
+    // Find item name from the card
+    var mc = cimg.closest('.mc');
+    var name = mc ? (mc.querySelector('.cname') || {}).textContent : '';
+    openLightbox(src, name);
+  }
+});
+
+// Close lightbox on backdrop click
+document.addEventListener('click', function(e) {
+  if (e.target.classList.contains('lightbox-backdrop')) {
+    closeLightbox();
+  }
+});
+
+// Close lightbox on Escape key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeLightbox();
+});
