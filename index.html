@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Clacton On Tea</title>
   <link
-    href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@300;400;500;700&family=Google+Sans+Display:wght@400;500;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400;1,600&family=Google+Sans:wght@300;400;500;700&family=Google+Sans+Display:wght@400;500;700&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="style.css">
 </head>
@@ -26,12 +26,24 @@
       <div class="toggle" onclick="toggleTheme()">
         <div class="knob"></div>
       </div>
+      <button class="burger" onclick="toggleMobileMenu()" aria-label="Toggle menu" id="burgerBtn">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </button>
     </div>
   </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <ul class="mobile-nav-links">
+      <li><a href="#menu" onclick="closeMobileMenu()">Menu</a></li>
+      <li><a href="#gallery" onclick="closeMobileMenu()">Gallery</a></li>
+      <li><a href="#order" onclick="closeMobileMenu()">Order</a></li>
+    </ul>
+  </div>
   <section class="hero">
     <div class="hero-l">
       <div class="htag rv">16 Rosemary Rd, Clacton-on-Sea, CO15 1NZ</div>
-      <h1 class="htitle rv d1">Where Every<br><span class="out">Sip Feels</span><br>Like Home</h1>
+      <h1 class="htitle rv d1">Where Every<br><span class="out italic-serif">Sip Feels</span><br>Like Home</h1>
       <p class="hsub rv d2">Your cozy neighborhood spot for the perfect sip. Freshly roasted coffee, premium teas, and
         moments worth sharing.</p>
       <div class="hact rv d3">
@@ -82,7 +94,7 @@
     <div class="sh rv">
       <div>
         <div class="slabel">What we make</div>
-        <h2 class="stitle">Our Menu</h2>
+        <h2 class="stitle">Our <span class="italic-serif">Menu</span></h2>
       </div>
     </div>
     <!-- Unified category chips -->
@@ -622,7 +634,7 @@
     <div class="show-more-wrap" id="showMoreWrap">
       <button class="show-more-btn" id="showMoreBtn" onclick="toggleShowMore()">
         <span id="showMoreTxt">Show all items</span>
-        <span class="show-more-arrow" id="showMoreArrow">â†“</span>
+        <span class="show-more-arrow" id="showMoreArrow">↓</span>
       </button>
     </div>
   </section>
@@ -642,19 +654,19 @@
   <div class="phil">
     <div class="phil-l">
       <div class="pnum rv">01</div>
-      <h2 class="ph rv d1">Our Craft<br>Philosophy</h2>
+      <h2 class="ph rv d1">Our Craft<br><span class="italic-serif">Philosophy</span></h2>
       <p class="pb rv d2">Every sip is a handcrafted experience. From the finest tea leaves to the creamiest milk, we
         believe that quality and comfort go hand in hand.</p>
     </div>
     <div class="phil-r">
       <div class="pp rv">
-        <div class="ppn">â€” 001</div>
+        <div class="ppn">— 001</div>
         <div class="ppt">Steeped with Care</div>
         <div class="pptx">We treat every leaf with respect, ensuring the perfect balance of flavor and aroma in every
           cup.</div>
       </div>
       <div class="pp rv d2">
-        <div class="ppn">â€” 002</div>
+        <div class="ppn">— 002</div>
         <div class="ppt">Honestly Wholesome</div>
         <div class="pptx">No shortcuts, just real ingredients. We source the best so you can taste the difference.</div>
       </div>
@@ -663,34 +675,34 @@
   <section class="ord" id="order">
     <div class="ord-l">
       <div class="slabel">Ready?</div>
-      <h2 class="otitle">Order<br>Right Now</h2>
+      <h2 class="otitle">Order<br><span class="italic-serif">Right Now</span></h2>
       <p class="osub">Available for takeaway and delivery. Get your favorites delivered across Clacton-on-Sea.</p>
       <a href="tel:+441255123456" class="btn-dk">Call to Order</a>
     </div>
     <div class="ord-r">
       <div class="slabel" style="margin-bottom:8px;">Good to know</div>
-      <div class="oi"><span class="oic">ðŸ“</span>
+      <div class="oi"><span class="oic">📍</span>
          <div>
           <div class="oit">Location</div>
           <div class="oix">16 Rosemary Rd, Clacton-on-Sea, CO15 1NZ</div>
         </div>
       </div>
-      <div class="oi"><span class="oic">ðŸ›µ</span>
+      <div class="oi"><span class="oic">🛵</span>
         <div>
           <div class="oit">Delivery</div>
           <div class="oix">Fast delivery across Clacton-on-Sea and surrounding areas</div>
         </div>
       </div>
-      <div class="oi"><span class="oic">ðŸ•</span>
+      <div class="oi"><span class="oic">🕒</span>
         <div>
           <div class="oit">Hours</div>
-          <div class="oix">Open daily â€” 11:00 AM to 9:00 PM</div>
+          <div class="oix">Open daily — 11:00 AM to 9:00 PM</div>
         </div>
       </div>
-      <div class="oi"><span class="oic">ðŸ’³</span>
+      <div class="oi"><span class="oic">💳</span>
         <div>
           <div class="oit">Payment</div>
-          <div class="oix">Cash on delivery, cards â€” all accepted</div>
+          <div class="oix">Cash on delivery, cards — all accepted</div>
         </div>
       </div>
     </div>
@@ -699,7 +711,7 @@
     <div class="ftop">
       <div>
         <div class="fbrand">Clacton On Tea</div>
-        <div class="ftag">Bold flavors, premium ingredients, unforgettable sips â€” crafted in Clacton-on-Sea.</div>
+        <div class="ftag">Bold flavors, premium ingredients, unforgettable sips — crafted in Clacton-on-Sea.</div>
       </div>
       <div>
         <div class="fct">Menu</div>
@@ -728,7 +740,7 @@
       </div>
     </div>
     <div class="fbot">
-      <div class="fcp">Â© 2026 Clacton On Tea. Clacton-on-Sea, United Kingdom.</div>
+      <div class="fcp">© 2026 Clacton On Tea. Clacton-on-Sea, United Kingdom.</div>
       <div class="fsoc"><a href="#">Instagram</a><a href="#">Facebook</a><a href="#">TikTok</a></div>
     </div>
   </footer>
