@@ -26,8 +26,6 @@
       <div class="toggle" onclick="toggleTheme()">
         <div class="knob"></div>
       </div>
-      <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank" class="nav-btn">Order
-        Now</a>
     </div>
   </nav>
   <section class="hero">
@@ -38,12 +36,10 @@
         moments worth sharing.</p>
       <div class="hact rv d3">
         <a href="#menu" class="btn-pri">Explore Menu</a>
-        <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank"
-          class="btn-ghost">Order Online <span class="arr">→</span></a>
       </div>
       <div class="hstats rv d4">
         <div>
-          <div class="sn">75+</div>
+          <div class="sn">52+</div>
           <div class="sl">Menu Items</div>
         </div>
         <div>
@@ -81,17 +77,7 @@
           class="mdot"></span></div>
     </div>
   </div>
-  <div class="gstrip gstrip-orig" id="gallery">
-    <div class="gcell"><img src="images/Playcard 1.png" alt="Clacton On Tea" />
-      <div class="glabel">Our Vibe</div>
-    </div>
-    <div class="gcell"><img src="images/Playcard 2.png" alt="Take a Break" />
-      <div class="glabel">Take a Break</div>
-    </div>
-    <div class="gcell"><img src="images/Playcard 3.jpg" alt="Taste" />
-      <div class="glabel">Taste</div>
-    </div>
-  </div>
+
   <section class="sec" id="menu" id="menuSection">
     <div class="sh rv">
       <div>
@@ -102,380 +88,554 @@
     <!-- Unified category chips -->
     <div class="cat-chips rv">
       <button class="chip chip-all active" onclick="filterMenu('all',this)" data-cat="all">
-        <span class="chip-icon">🍽️</span>
+        <span class="chip-icon">&#x1F37D;&#xFE0F;</span>
         <span class="chip-label">All</span>
-        <span class="chip-count">53+ items</span>
+        <span class="chip-count">52 items</span>
       </button>
-      <button class="chip" onclick="filterMenu('pizza',this)" data-cat="pizza">
-        <span class="chip-icon">🍕</span>
-        <span class="chip-label">Pizza</span>
-        <span class="chip-count">14 items</span>
-      </button>
-      <button class="chip" onclick="filterMenu('burger',this)" data-cat="burger">
-        <span class="chip-icon">🍔</span>
-        <span class="chip-label">Burgers</span>
+      <button class="chip" onclick="filterMenu('milktea',this)" data-cat="milktea">
+        <span class="chip-icon">&#x1F95B;</span>
+        <span class="chip-label">Milk Teas</span>
         <span class="chip-count">8 items</span>
       </button>
-      <button class="chip" onclick="filterMenu('platter',this)" data-cat="platter">
-        <span class="chip-icon">🥘</span>
-        <span class="chip-label">Platters</span>
+      <button class="chip" onclick="filterMenu('fruittea',this)" data-cat="fruittea">
+        <span class="chip-icon">&#x1F353;</span>
+        <span class="chip-label">Fruit Teas</span>
+        <span class="chip-count">7 items</span>
+      </button>
+      <button class="chip" onclick="filterMenu('matcha',this)" data-cat="matcha">
+        <span class="chip-icon">&#x1F375;</span>
+        <span class="chip-label">Matcha</span>
+        <span class="chip-count">8 items</span>
+      </button>
+      <button class="chip" onclick="filterMenu('brownsugar',this)" data-cat="brownsugar">
+        <span class="chip-icon">&#x1F964;</span>
+        <span class="chip-label">Brown Sugar</span>
+        <span class="chip-count">5 items</span>
+      </button>
+      <button class="chip" onclick="filterMenu('hotdrink',this)" data-cat="hotdrink">
+        <span class="chip-icon">&#x2615;</span>
+        <span class="chip-label">Hot Drinks</span>
+        <span class="chip-count">9 items</span>
+      </button>
+      <button class="chip" onclick="filterMenu('special',this)" data-cat="special">
+        <span class="chip-icon">&#x2B50;</span>
+        <span class="chip-label">Specials</span>
+        <span class="chip-count">3 items</span>
+      </button>
+      <button class="chip" onclick="filterMenu('icecream',this)" data-cat="icecream">
+        <span class="chip-icon">&#x1F368;</span>
+        <span class="chip-label">Ice Cream</span>
         <span class="chip-count">6 items</span>
       </button>
-      <button class="chip" onclick="filterMenu('drink',this)" data-cat="drink">
-        <span class="chip-icon">🧃</span>
-        <span class="chip-label">Drinks</span>
-        <span class="chip-count">20+ items</span>
-      </button>
-      <button class="chip" onclick="filterMenu('combo',this)" data-cat="combo">
-        <span class="chip-icon">📦</span>
-        <span class="chip-label">Combos</span>
-        <span class="chip-count">5 items</span>
+      <button class="chip" onclick="filterMenu('milkshake',this)" data-cat="milkshake">
+        <span class="chip-icon">&#x1F964;</span>
+        <span class="chip-label">Shakes</span>
+        <span class="chip-count">6 items</span>
       </button>
     </div>
     <div class="mgrid" id="mg">
-      <div class="mc" data-cat="pizza">
-        <div class="cimg cimg-ai">
-          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80"
-            alt="BBQ Meat Machine Pizza" loading="lazy"
-            onerror="this.parentElement.innerHTML='<div class=cph-fall>🍕</div>'" />
-          <span class="ai-badge">AI Photo</span>
-        </div>
+      <!-- MILK TEAS -->
+      <div class="mc" data-cat="milktea">
+        <div class="cimg"><img src="images/classic_milk_tea.png" alt="Classic Milk Tea" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x1F95B;</div>'" /></div>
         <div class="cbody">
-          <div class="ctop"><span class="cbadge">Popular</span><span class="cprice">Tk 335+</span></div>
-          <div class="cname">BBQ Meat Machine Pizza</div>
-          <div class="cdesc">Beef &amp; chicken, freshly cut vegetables, cheese &amp; soft dough.</div>
+          <div class="ctop"><span class="cbadge">Popular</span><span class="cprice">&pound;4.49 / &pound;4.99</span></div>
+          <div class="cname">Classic Milk Tea</div>
+          <div class="cdesc">Our signature blend of premium black tea and creamy milk, served over chewy tapioca pearls.</div>
         </div>
-        <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank"
-          class="cadd"><span>Add to Order</span><span class="ci-btn">+</span></a>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="Classic Milk Tea"><span>Add to Order</span><span class="ci-btn">+</span></a>
       </div>
-      <div class="mc" data-cat="pizza">
-        <div class="cimg cimg-ai">
-          <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=600&q=80" alt="Meat Masala Pizza"
-            loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>🍕</div>'" />
-          <span class="ai-badge">AI Photo</span>
-        </div>
+      <div class="mc" data-cat="milktea">
+        <div class="cimg"><img src="images/taro_milk_tea.png" alt="Taro Milk Tea" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x1F95B;</div>'" /></div>
         <div class="cbody">
-          <div class="ctop"><span class="cbadge">Popular</span><span class="cprice">Tk 335+</span></div>
-          <div class="cname">Meat Masala Pizza</div>
-          <div class="cdesc">Lots of meat. Lots of spice. A carnivore's dream.</div>
+          <div class="ctop"><span class="cbadge">Popular</span><span class="cprice">&pound;4.49 / &pound;4.99</span></div>
+          <div class="cname">Taro Milk Tea</div>
+          <div class="cdesc">A beautiful purple, creamy milk tea with a unique sweet, nutty vanilla-like flavor.</div>
         </div>
-        <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank"
-          class="cadd"><span>Add to Order</span><span class="ci-btn">+</span></a>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="Taro Milk Tea"><span>Add to Order</span><span class="ci-btn">+</span></a>
       </div>
-      <div class="mc" data-cat="pizza">
-        <div class="cimg cimg-ai">
-          <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600&q=80" alt="Kebab Cocktail Pizza"
-            loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>🍕</div>'" />
-          <span class="ai-badge">AI Photo</span>
-        </div>
+      <div class="mc" data-cat="milktea">
+        <div class="cimg"><img src="images/strawberry_milk_tea.png" alt="Strawberry Milk Tea" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x1F95B;</div>'" /></div>
         <div class="cbody">
-          <div class="ctop"><span class="cbadge">Popular</span><span class="cprice">Tk 345+</span></div>
-          <div class="cname">Kebab Cocktail Pizza</div>
-          <div class="cdesc">5 types of chicken loaded with authentic kebab spice.</div>
+          <div class="ctop"><span class="cbadge hidden">&middot;</span><span class="cprice">&pound;4.49 / &pound;4.99</span></div>
+          <div class="cname">Strawberry Milk Tea</div>
+          <div class="cdesc">Sweet, fruity strawberry infusion blended with our classic milk tea base.</div>
         </div>
-        <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank"
-          class="cadd"><span>Add to Order</span><span class="ci-btn">+</span></a>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="Strawberry Milk Tea"><span>Add to Order</span><span class="ci-btn">+</span></a>
       </div>
-      <div class="mc" data-cat="pizza">
-        <div class="cimg cimg-ai">
-          <img src="https://images.unsplash.com/photo-1528137871618-79d2761e3fd5?w=600&q=80"
-            alt="Sausage Carnival Pizza" loading="lazy"
-            onerror="this.parentElement.innerHTML='<div class=cph-fall>🍕</div>'" />
-          <span class="ai-badge">AI Photo</span>
-        </div>
+      <div class="mc" data-cat="milktea">
+        <div class="cimg"><img src="https://images.unsplash.com/photo-1623065422902-30a2d299bbe4?w=500&auto=format&fit=crop&q=80" alt="Mango Milk Tea" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x1F95B;</div>'" /></div>
         <div class="cbody">
-          <div class="ctop"><span class="cbadge">Popular</span><span class="cprice">Tk 335+</span></div>
-          <div class="cname">Sausage Carnival Pizza</div>
-          <div class="cdesc">Big sausage, mushroom &amp; spice — a carnival on every slice.</div>
+          <div class="ctop"><span class="cbadge hidden">&middot;</span><span class="cprice">&pound;4.49 / &pound;4.99</span></div>
+          <div class="cname">Mango Milk Tea</div>
+          <div class="cdesc">Tropical mango pur&eacute;e combined with smooth milk tea for a refreshing, fruity treat.</div>
         </div>
-        <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank"
-          class="cadd"><span>Add to Order</span><span class="ci-btn">+</span></a>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="Mango Milk Tea"><span>Add to Order</span><span class="ci-btn">+</span></a>
       </div>
-      <div class="mc" data-cat="pizza">
-        <div class="cimg cimg-ai">
-          <img src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=600&q=80"
-            alt="The Everything Chicken Pizza" loading="lazy"
-            onerror="this.parentElement.innerHTML='<div class=cph-fall>🍕</div>'" />
-          <span class="ai-badge">AI Photo</span>
-        </div>
+      <div class="mc" data-cat="milktea">
+        <div class="cimg"><img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=500&auto=format&fit=crop&q=80" alt="Peach Milk Tea" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x1F95B;</div>'" /></div>
         <div class="cbody">
-          <div class="ctop"><span class="cbadge">Popular</span><span class="cprice">Tk 495+</span></div>
-          <div class="cname">The Everything Chicken Pizza</div>
-          <div class="cdesc">For the first-timer. Pick it once and get addicted forever.</div>
+          <div class="ctop"><span class="cbadge hidden">&middot;</span><span class="cprice">&pound;4.49 / &pound;4.99</span></div>
+          <div class="cname">Peach Milk Tea</div>
+          <div class="cdesc">Delicate peach notes blended with our smooth milk tea. Fruity and creamy.</div>
         </div>
-        <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank"
-          class="cadd"><span>Add to Order</span><span class="ci-btn">+</span></a>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="Peach Milk Tea"><span>Add to Order</span><span class="ci-btn">+</span></a>
       </div>
-      <div class="mc" data-cat="pizza">
-        <div class="cimg cimg-ai">
-          <img src="https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?w=600&q=80"
-            alt="Mac &amp; Cheese Pizza" loading="lazy"
-            onerror="this.parentElement.innerHTML='<div class=cph-fall>🍕</div>'" />
-          <span class="ai-badge">AI Photo</span>
-        </div>
+      <div class="mc" data-cat="milktea">
+        <div class="cimg"><img src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=500&auto=format&fit=crop&q=80" alt="Watermelon Milk Tea" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x1F95B;</div>'" /></div>
         <div class="cbody">
-          <div class="ctop"><span class="cbadge hidden">·</span><span class="cprice">Tk 335+</span></div>
-          <div class="cname">Mac &amp; Cheese Pizza</div>
-          <div class="cdesc">Pasta, mixed cheese, corn, sausage &amp; chicken — indulgent fusion.</div>
+          <div class="ctop"><span class="cbadge hidden">&middot;</span><span class="cprice">&pound;4.49 / &pound;4.99</span></div>
+          <div class="cname">Watermelon Milk Tea</div>
+          <div class="cdesc">Light and refreshing milk tea with a splash of sweet summer watermelon flavor.</div>
         </div>
-        <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank"
-          class="cadd"><span>Add to Order</span><span class="ci-btn">+</span></a>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="Watermelon Milk Tea"><span>Add to Order</span><span class="ci-btn">+</span></a>
       </div>
-      <div class="mc" data-cat="pizza">
-        <div class="cimg cimg-ai">
-          <img src="https://images.unsplash.com/photo-1548369937-47519962c11a?w=600&q=80" alt="Cheddar Cream Pizza"
-            loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>🍕</div>'" />
-          <span class="ai-badge">AI Photo</span>
-        </div>
+      <div class="mc" data-cat="milktea">
+        <div class="cimg"><img src="https://images.unsplash.com/photo-1558857563-b371033873b8?w=500&auto=format&fit=crop&q=80" alt="Vanilla Milk Tea" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x1F95B;</div>'" /></div>
         <div class="cbody">
-          <div class="ctop"><span class="cbadge hidden">·</span><span class="cprice">Tk 325+</span></div>
-          <div class="cname">Cheddar Cream Pizza</div>
-          <div class="cdesc">Salty, cheesy, chicken. The cult favourite.</div>
+          <div class="ctop"><span class="cbadge hidden">&middot;</span><span class="cprice">&pound;4.49 / &pound;4.99</span></div>
+          <div class="cname">Vanilla Milk Tea</div>
+          <div class="cdesc">Rich vanilla bean flavor infused with our classic smooth milk tea.</div>
         </div>
-        <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank"
-          class="cadd"><span>Add to Order</span><span class="ci-btn">+</span></a>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="Vanilla Milk Tea"><span>Add to Order</span><span class="ci-btn">+</span></a>
       </div>
-      <div class="mc" data-cat="pizza">
-        <div class="cimg cimg-ai">
-          <img src="https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=600&q=80" alt="Royal Silk Pizza"
-            loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>🍕</div>'" />
-          <span class="ai-badge">AI Photo</span>
-        </div>
+      <div class="mc" data-cat="milktea">
+        <div class="cimg"><img src="https://images.unsplash.com/photo-1542826438-bd32f43d626f?w=500&auto=format&fit=crop&q=80" alt="Brown Sugar Milk Tea" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x1F95B;</div>'" /></div>
         <div class="cbody">
-          <div class="ctop"><span class="cbadge hidden">·</span><span class="cprice">Tk 349+</span></div>
-          <div class="cname">Royal Silk Pizza</div>
-          <div class="cdesc">Thai basil, onions, tomatoes &amp; chicken keema — tangy kick.</div>
+          <div class="ctop"><span class="cbadge hidden">&middot;</span><span class="cprice">&pound;4.49 / &pound;4.99</span></div>
+          <div class="cname">Brown Sugar Milk Tea</div>
+          <div class="cdesc">Our classic milk tea drizzled with rich, caramelized brown sugar syrup.</div>
         </div>
-        <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank"
-          class="cadd"><span>Add to Order</span><span class="ci-btn">+</span></a>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="Brown Sugar Milk Tea"><span>Add to Order</span><span class="ci-btn">+</span></a>
       </div>
-      <div class="mc" data-cat="pizza">
-        <div class="cimg"><img src="images/image_4.jpeg" alt="Valentine's Special Pizza" loading="lazy" /></div>
+
+      <!-- FRUIT TEAS -->
+      <div class="mc" data-cat="fruittea">
+        <div class="cimg"><img src="https://images.unsplash.com/photo-1553530979-7ee52a2670c4?w=500&auto=format&fit=crop&q=80" alt="Strawberry Fruit Tea" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x1F353;</div>'" /></div>
         <div class="cbody">
-          <div class="ctop"><span class="cbadge hidden">·</span><span class="cprice">Tk 755+</span></div>
-          <div class="cname">Valentine's Special Pizza</div>
-          <div class="cdesc">12&quot; heart-shaped pizza with four flavors. Share the love.</div>
+          <div class="ctop"><span class="cbadge">Popular</span><span class="cprice">&pound;4.49 / &pound;4.99</span></div>
+          <div class="cname">Strawberry Fruit Tea</div>
+          <div class="cdesc">Sweet strawberry syrup infused with freshly brewed jasmine green tea.</div>
         </div>
-        <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank"
-          class="cadd"><span>Add to Order</span><span class="ci-btn">+</span></a>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="Strawberry Fruit Tea"><span>Add to Order</span><span class="ci-btn">+</span></a>
       </div>
-      <div class="mc" data-cat="burger">
-        <div class="cimg cimg-ai">
-          <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80"
-            alt="Chicken Cheese Volcano" loading="lazy"
-            onerror="this.parentElement.innerHTML='<div class=cph-fall>🍕</div>'" />
-          <span class="ai-badge">AI Photo</span>
-        </div>
+      <div class="mc" data-cat="fruittea">
+        <div class="cimg"><img src="images/mango_fruit_tea.png" alt="Mango Fruit Tea" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x1F353;</div>'" /></div>
         <div class="cbody">
-          <div class="ctop"><span class="cbadge hidden">·</span><span class="cprice">Tk 339+</span></div>
-          <div class="cname">Chicken Cheese Volcano</div>
-          <div class="cdesc">Juicy chicken patty in soft buns with an explosion of cheese.</div>
+          <div class="ctop"><span class="cbadge hidden">&middot;</span><span class="cprice">&pound;4.49 / &pound;4.99</span></div>
+          <div class="cname">Mango Fruit Tea</div>
+          <div class="cdesc">Tropical mango juice paired with refreshing iced green tea.</div>
         </div>
-        <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank"
-          class="cadd"><span>Add to Order</span><span class="ci-btn">+</span></a>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="Mango Fruit Tea"><span>Add to Order</span><span class="ci-btn">+</span></a>
       </div>
-      <div class="mc" data-cat="burger">
-        <div class="cimg cimg-ai">
-          <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=600&q=80" alt="Beef Cheese Volcano"
-            loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>🍕</div>'" />
-          <span class="ai-badge">AI Photo</span>
-        </div>
+      <div class="mc" data-cat="fruittea">
+        <div class="cimg"><img src="images/peach_fruit_tea.png" alt="Peach Fruit Tea" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x1F353;</div>'" /></div>
         <div class="cbody">
-          <div class="ctop"><span class="cbadge hidden">·</span><span class="cprice">Tk 379+</span></div>
-          <div class="cname">Beef Cheese Volcano</div>
-          <div class="cdesc">Meaty beef patty, soft buns, molten cheese — pure indulgence.</div>
+          <div class="ctop"><span class="cbadge">Popular</span><span class="cprice">&pound;4.49 / &pound;4.99</span></div>
+          <div class="cname">Peach Fruit Tea</div>
+          <div class="cdesc">A clean, thirst-quenching iced tea infused with sweet peach juice.</div>
         </div>
-        <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank"
-          class="cadd"><span>Add to Order</span><span class="ci-btn">+</span></a>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="Peach Fruit Tea"><span>Add to Order</span><span class="ci-btn">+</span></a>
       </div>
-      <div class="mc" data-cat="burger">
-        <div class="cimg cimg-ai">
-          <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=600&q=80" alt="Chicken Tongue Slayer"
-            loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>🍕</div>'" />
-          <span class="ai-badge">AI Photo</span>
-        </div>
+      <div class="mc" data-cat="fruittea">
+        <div class="cimg"><img src="images/passion_fruit_tea.png" alt="Passion Fruit Tea" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x1F353;</div>'" /></div>
         <div class="cbody">
-          <div class="ctop"><span class="cbadge hidden">·</span><span class="cprice">Tk 229+</span></div>
-          <div class="cname">Chicken Tongue Slayer</div>
-          <div class="cdesc">25% naga sauce. Cheesy. Not for the faint-hearted.</div>
+          <div class="ctop"><span class="cbadge hidden">&middot;</span><span class="cprice">&pound;4.49 / &pound;4.99</span></div>
+          <div class="cname">Passion Fruit Tea</div>
+          <div class="cdesc">Tangy and sweet passion fruit juice blended with crisp green tea.</div>
         </div>
-        <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank"
-          class="cadd"><span>Add to Order</span><span class="ci-btn">+</span></a>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="Passion Fruit Tea"><span>Add to Order</span><span class="ci-btn">+</span></a>
       </div>
-      <div class="mc" data-cat="burger">
-        <div class="cimg cimg-ai">
-          <img src="https://images.unsplash.com/photo-1561758033-d89a9ad46330?w=600&q=80" alt="BBQ Chicken Burger"
-            loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>🍕</div>'" />
-          <span class="ai-badge">AI Photo</span>
-        </div>
+      <div class="mc" data-cat="fruittea">
+        <div class="cimg"><img src="https://images.unsplash.com/photo-1589733955941-5eeaf752f6dd?w=500&auto=format&fit=crop&q=80" alt="Lychee Fruit Tea" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x1F353;</div>'" /></div>
         <div class="cbody">
-          <div class="ctop"><span class="cbadge hidden">·</span><span class="cprice">Tk 219+</span></div>
-          <div class="cname">BBQ Chicken Burger</div>
-          <div class="cdesc">Juicy BBQ chicken, melty cheese &amp; BBQ sauce — classic.</div>
+          <div class="ctop"><span class="cbadge hidden">&middot;</span><span class="cprice">&pound;4.49 / &pound;4.99</span></div>
+          <div class="cname">Lychee Fruit Tea</div>
+          <div class="cdesc">A light, exotic tea flavored with sweet and floral lychee.</div>
         </div>
-        <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank"
-          class="cadd"><span>Add to Order</span><span class="ci-btn">+</span></a>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="Lychee Fruit Tea"><span>Add to Order</span><span class="ci-btn">+</span></a>
       </div>
-      <div class="mc" data-cat="burger">
-        <div class="cimg cimg-ai">
-          <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=600&q=80" alt="Chicken Juicy Bomb"
-            loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>🍕</div>'" />
-          <span class="ai-badge">AI Photo</span>
-        </div>
+      <div class="mc" data-cat="fruittea">
+        <div class="cimg"><img src="images/blueberry_tea.png" alt="Blueberry Fruit Tea" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x1F353;</div>'" /></div>
         <div class="cbody">
-          <div class="ctop"><span class="cbadge hidden">·</span><span class="cprice">Tk 199+</span></div>
-          <div class="cname">Chicken Juicy Bomb</div>
-          <div class="cdesc">Juicy chicken patty with oozing cheese inside.</div>
+          <div class="ctop"><span class="cbadge hidden">&middot;</span><span class="cprice">&pound;4.49 / &pound;4.99</span></div>
+          <div class="cname">Blueberry Fruit Tea</div>
+          <div class="cdesc">Brewed green tea infused with sweet blueberry pur&eacute;e.</div>
         </div>
-        <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank"
-          class="cadd"><span>Add to Order</span><span class="ci-btn">+</span></a>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="Blueberry Fruit Tea"><span>Add to Order</span><span class="ci-btn">+</span></a>
       </div>
-      <div class="mc" data-cat="burger">
-        <div class="cimg cimg-ai">
-          <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=600&q=80" alt="Beef Juicy Bomb"
-            loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>🍕</div>'" />
-          <span class="ai-badge">AI Photo</span>
-        </div>
+      <div class="mc" data-cat="fruittea">
+        <div class="cimg"><img src="https://images.unsplash.com/photo-1582106245687-cbb466a9f07f?w=500&auto=format&fit=crop&q=80" alt="Watermelon Fruit Tea" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x1F353;</div>'" /></div>
         <div class="cbody">
-          <div class="ctop"><span class="cbadge hidden">·</span><span class="cprice">Tk 239+</span></div>
-          <div class="cname">Beef Juicy Bomb</div>
-          <div class="cdesc">Meaty beef patty with oozing cheese inside.</div>
+          <div class="ctop"><span class="cbadge hidden">&middot;</span><span class="cprice">&pound;4.49 / &pound;4.99</span></div>
+          <div class="cname">Watermelon Fruit Tea</div>
+          <div class="cdesc">Freshly brewed green tea layered with refreshing watermelon juice.</div>
         </div>
-        <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank"
-          class="cadd"><span>Add to Order</span><span class="ci-btn">+</span></a>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="Watermelon Fruit Tea"><span>Add to Order</span><span class="ci-btn">+</span></a>
       </div>
-      <div class="mc" data-cat="platter">
-        <div class="cimg"><img src="images/image_5.jpeg" alt="Iftar Platter (Single)" loading="lazy" /></div>
+
+      <!-- MATCHA TEAS -->
+      <div class="mc" data-cat="matcha">
+        <div class="cimg"><img src="images/matcha_latte.png" alt="Matcha Milk" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x1F375;</div>'" /></div>
         <div class="cbody">
-          <div class="ctop"><span class="cbadge hidden">·</span><span class="cprice">Tk 375</span></div>
-          <div class="cname">Iftar Platter (Single)</div>
-          <div class="cdesc">Mild spicy rice, chicken chaap, sausage, chili onion &amp; fruits.</div>
+          <div class="ctop"><span class="cbadge">Premium</span><span class="cprice">&pound;5.49 / &pound;5.99</span></div>
+          <div class="cname">Matcha Milk</div>
+          <div class="cdesc">High-grade Japanese Uji matcha whisked with fresh, creamy milk.</div>
         </div>
-        <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank"
-          class="cadd"><span>Add to Order</span><span class="ci-btn">+</span></a>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="Matcha Milk"><span>Add to Order</span><span class="ci-btn">+</span></a>
       </div>
-      <div class="mc" data-cat="platter">
-        <div class="cimg"><img src="images/image_6.jpeg" alt="Premium Platter — 1" loading="lazy" /></div>
+      <div class="mc" data-cat="matcha">
+        <div class="cimg"><img src="https://images.unsplash.com/photo-1515823064-d6e0c04616a7?w=500&auto=format&fit=crop&q=80" alt="Mango Matcha" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x1F375;</div>'" /></div>
         <div class="cbody">
-          <div class="ctop"><span class="cbadge hidden">·</span><span class="cprice">Tk 749</span></div>
-          <div class="cname">Premium Platter — 1</div>
-          <div class="cdesc">2 pcs chicken chaap, aromatic rice, chili onion &amp; BBQ sausages with Cuban sauce.</div>
+          <div class="ctop"><span class="cbadge">Popular</span><span class="cprice">&pound;5.49 / &pound;5.99</span></div>
+          <div class="cname">Mango Matcha</div>
+          <div class="cdesc">A stunning dual-layered drink with sweet mango pur&eacute;e and premium green matcha.</div>
         </div>
-        <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank"
-          class="cadd"><span>Add to Order</span><span class="ci-btn">+</span></a>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="Mango Matcha"><span>Add to Order</span><span class="ci-btn">+</span></a>
       </div>
-      <div class="mc" data-cat="platter">
-        <div class="cimg"><img src="images/image_7.jpeg" alt="Premium Platter — 2" loading="lazy" /></div>
+      <div class="mc" data-cat="matcha">
+        <div class="cimg"><img src="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?w=500&auto=format&fit=crop&q=80" alt="Strawberry Matcha" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x1F375;</div>'" /></div>
         <div class="cbody">
-          <div class="ctop"><span class="cbadge hidden">·</span><span class="cprice">Tk 375</span></div>
-          <div class="cname">Premium Platter — 2</div>
-          <div class="cdesc">Chicken chaap, aromatic rice &amp; BBQ sausages with green chili sauce.</div>
+          <div class="ctop"><span class="cbadge">Popular</span><span class="cprice">&pound;5.49 / &pound;5.99</span></div>
+          <div class="cname">Strawberry Matcha</div>
+          <div class="cdesc">Layered fresh strawberry pur&eacute;e, creamy milk, and bright green matcha.</div>
         </div>
-        <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank"
-          class="cadd"><span>Add to Order</span><span class="ci-btn">+</span></a>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="Strawberry Matcha"><span>Add to Order</span><span class="ci-btn">+</span></a>
       </div>
-      <div class="mc" data-cat="platter">
-        <div class="cimg"><img src="images/image_8.jpeg" alt="Fat Boy" loading="lazy" /></div>
+      <div class="mc" data-cat="matcha">
+        <div class="cimg"><img src="https://images.unsplash.com/photo-1525184782196-8e2ded604bf7?w=500&auto=format&fit=crop&q=80" alt="Blueberry Matcha" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x1F375;</div>'" /></div>
         <div class="cbody">
-          <div class="ctop"><span class="cbadge hidden">·</span><span class="cprice">Tk 319+</span></div>
-          <div class="cname">Fat Boy</div>
-          <div class="cdesc">Fried rice, 3 pcs chicken lollipop, chili onion, salad &amp; chutney.</div>
+          <div class="ctop"><span class="cbadge hidden">&middot;</span><span class="cprice">&pound;5.49 / &pound;5.99</span></div>
+          <div class="cname">Blueberry Matcha</div>
+          <div class="cdesc">Blueberry syrup layered with milk and premium Japanese matcha.</div>
         </div>
-        <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank"
-          class="cadd"><span>Add to Order</span><span class="ci-btn">+</span></a>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="Blueberry Matcha"><span>Add to Order</span><span class="ci-btn">+</span></a>
       </div>
-      <div class="mc" data-cat="drink">
-        <div class="cimg cimg-ai">
-          <img src="images/Coffee photo.jpg" alt="Killer Latte" loading="lazy"
-            onerror="this.parentElement.innerHTML='<div class=cph-fall>🍕</div>'" />
-          <span class="ai-badge">AI Photo</span>
-        </div>
+      <div class="mc" data-cat="matcha">
+        <div class="cimg"><img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=500&auto=format&fit=crop&q=80" alt="Coconut Matcha" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x1F375;</div>'" /></div>
         <div class="cbody">
-          <div class="ctop"><span class="cbadge hidden">·</span><span class="cprice">Tk 349</span></div>
-          <div class="cname">Killer Latte</div>
-          <div class="cdesc">Artfully crafted latte with smooth foam and rich espresso.</div>
+          <div class="ctop"><span class="cbadge hidden">&middot;</span><span class="cprice">&pound;5.49 / &pound;5.99</span></div>
+          <div class="cname">Coconut Matcha</div>
+          <div class="cdesc">Light coconut milk layered with premium earth-grown matcha.</div>
         </div>
-        <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank"
-          class="cadd"><span>Add to Order</span><span class="ci-btn">+</span></a>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="Coconut Matcha"><span>Add to Order</span><span class="ci-btn">+</span></a>
       </div>
-      <div class="mc" data-cat="drink">
-        <div class="cimg cimg-ai">
-          <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600&q=80" alt="Hazelnut Iced Latte"
-            loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>🍕</div>'" />
-          <span class="ai-badge">AI Photo</span>
-        </div>
+      <div class="mc" data-cat="matcha">
+        <div class="cimg"><img src="https://images.unsplash.com/photo-1536256263959-770b48d82b0a?w=500&auto=format&fit=crop&q=80" alt="White Chocolate Matcha" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x1F375;</div>'" /></div>
         <div class="cbody">
-          <div class="ctop"><span class="cbadge hidden">·</span><span class="cprice">Tk 349</span></div>
-          <div class="cname">Hazelnut Iced Latte</div>
-          <div class="cdesc">Espresso, milk, ice &amp; hazelnut — cool &amp; nutty.</div>
+          <div class="ctop"><span class="cbadge hidden">&middot;</span><span class="cprice">&pound;5.49 / &pound;5.99</span></div>
+          <div class="cname">White Chocolate Matcha</div>
+          <div class="cdesc">Indulgent white chocolate syrup combined with whisked Uji matcha and milk.</div>
         </div>
-        <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank"
-          class="cadd"><span>Add to Order</span><span class="ci-btn">+</span></a>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="White Chocolate Matcha"><span>Add to Order</span><span class="ci-btn">+</span></a>
       </div>
-      <div class="mc" data-cat="drink">
-        <div class="cimg cimg-ai">
-          <img src="https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=600&q=80" alt="Lemon Mint Mojito"
-            loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>🍕</div>'" />
-          <span class="ai-badge">AI Photo</span>
-        </div>
+      <div class="mc" data-cat="matcha">
+        <div class="cimg"><img src="https://images.unsplash.com/photo-1590137876181-2a5a7e340308?w=500&auto=format&fit=crop&q=80" alt="Pistachio Matcha" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x1F375;</div>'" /></div>
         <div class="cbody">
-          <div class="ctop"><span class="cbadge hidden">·</span><span class="cprice">Tk 249</span></div>
-          <div class="cname">Lemon Mint Mojito</div>
-          <div class="cdesc">Fresh lemon &amp; mint for a cool, zesty mocktail.</div>
+          <div class="ctop"><span class="cbadge">Premium</span><span class="cprice">&pound;5.49 / &pound;5.99</span></div>
+          <div class="cname">Pistachio Matcha</div>
+          <div class="cdesc">A nutty pistachio cream layered with premium green matcha tea.</div>
         </div>
-        <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank"
-          class="cadd"><span>Add to Order</span><span class="ci-btn">+</span></a>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="Pistachio Matcha"><span>Add to Order</span><span class="ci-btn">+</span></a>
       </div>
-      <div class="mc" data-cat="combo">
-        <div class="cimg cimg-ai">
-          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80" alt="Couple Combo"
-            loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>🍕</div>'" />
-          <span class="ai-badge">AI Photo</span>
-        </div>
+      <div class="mc" data-cat="matcha">
+        <div class="cimg"><img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=500&auto=format&fit=crop&q=80" alt="Vanilla Matcha" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x1F375;</div>'" /></div>
         <div class="cbody">
-          <div class="ctop"><span class="cbadge hidden">·</span><span class="cprice">Tk 549</span></div>
-          <div class="cname">Couple Combo</div>
-          <div class="cdesc">Personal pizza, BBQ sausage, mushroom &amp; 4 pcs chicken lollipop.</div>
+          <div class="ctop"><span class="cbadge hidden">&middot;</span><span class="cprice">&pound;5.49 / &pound;5.99</span></div>
+          <div class="cname">Vanilla Matcha</div>
+          <div class="cdesc">Classic vanilla syrup mixed with smooth, earthy matcha and milk.</div>
         </div>
-        <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank"
-          class="cadd"><span>Add to Order</span><span class="ci-btn">+</span></a>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="Vanilla Matcha"><span>Add to Order</span><span class="ci-btn">+</span></a>
       </div>
-      <div class="mc" data-cat="combo">
-        <div class="cimg cimg-ai">
-          <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&q=80" alt="Group Combo"
-            loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>🍕</div>'" />
-          <span class="ai-badge">AI Photo</span>
-        </div>
+
+      <!-- BROWN SUGAR TEAS -->
+      <div class="mc" data-cat="brownsugar">
+        <div class="cimg"><img src="https://images.unsplash.com/photo-1592861956120-e524fc739696?w=500&auto=format&fit=crop&q=80" alt="Brown Sugar Milk" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x1F9CB;</div>'" /></div>
         <div class="cbody">
-          <div class="ctop"><span class="cbadge hidden">·</span><span class="cprice">Tk 1,099+</span></div>
-          <div class="cname">Group Combo</div>
-          <div class="cdesc">9&quot; meaty onion pizza, fried rice, chili onion &amp; 8 pcs chicken wings.</div>
+          <div class="ctop"><span class="cbadge">Premium</span><span class="cprice">&pound;5.49 / &pound;5.99</span></div>
+          <div class="cname">Brown Sugar Milk</div>
+          <div class="cdesc">Fresh creamy milk combined with caramelized brown sugar syrup and tapioca pearls.</div>
         </div>
-        <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank"
-          class="cadd"><span>Add to Order</span><span class="ci-btn">+</span></a>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="Brown Sugar Milk"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+      <div class="mc" data-cat="brownsugar">
+        <div class="cimg"><img src="images/brown_sugar_boba.png" alt="Brown Sugar Milk Tea" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x1F9CB;</div>'" /></div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge">Popular</span><span class="cprice">&pound;5.49 / &pound;5.99</span></div>
+          <div class="cname">Brown Sugar Milk Tea</div>
+          <div class="cdesc">Our classic black milk tea swirled with rich brown sugar syrup.</div>
+        </div>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="Brown Sugar Milk Tea"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+      <div class="mc" data-cat="brownsugar">
+        <div class="cimg"><img src="https://images.unsplash.com/photo-1541696490-8744a5dc0228?w=500&auto=format&fit=crop&q=80" alt="Brown Sugar Taro" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x1F9CB;</div>'" /></div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge hidden">&middot;</span><span class="cprice">&pound;5.49 / &pound;5.99</span></div>
+          <div class="cname">Brown Sugar Taro</div>
+          <div class="cdesc">Purple taro milk tea layered with sweet brown sugar caramelized syrup.</div>
+        </div>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="Brown Sugar Taro"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+      <div class="mc" data-cat="brownsugar">
+        <div class="cimg"><img src="https://images.unsplash.com/photo-1607330289024-1535c6b4e1c1?w=500&auto=format&fit=crop&q=80" alt="Brown Sugar Matcha" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x1F9CB;</div>'" /></div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge hidden">&middot;</span><span class="cprice">&pound;5.49 / &pound;5.99</span></div>
+          <div class="cname">Brown Sugar Matcha</div>
+          <div class="cdesc">Earthy matcha tea combined with sweet caramelized brown sugar syrup.</div>
+        </div>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="Brown Sugar Matcha"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+      <div class="mc" data-cat="brownsugar">
+        <div class="cimg"><img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=500&auto=format&fit=crop&q=80" alt="Brown Sugar Latte" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x1F9CB;</div>'" /></div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge hidden">&middot;</span><span class="cprice">&pound;5.49 / &pound;5.99</span></div>
+          <div class="cname">Brown Sugar Latte</div>
+          <div class="cdesc">Rich double espresso, creamy milk, and caramelized brown sugar syrup.</div>
+        </div>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="Brown Sugar Latte"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+
+      <!-- HOT DRINKS -->
+      <div class="mc" data-cat="hotdrink">
+        <div class="cimg"><img src="images/espresso_coffee.png" alt="Espresso" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x2615;</div>'" /></div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge hidden">&middot;</span><span class="cprice">&pound;2.99 / &pound;3.49</span></div>
+          <div class="cname">Espresso</div>
+          <div class="cdesc">A rich, concentrated double shot of our specialty roasted espresso beans.</div>
+        </div>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="Espresso"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+      <div class="mc" data-cat="hotdrink">
+        <div class="cimg"><img src="https://images.unsplash.com/photo-1507133750040-4a8f57021571?w=500&auto=format&fit=crop&q=80" alt="Americano" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x2615;</div>'" /></div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge hidden">&middot;</span><span class="cprice">&pound;2.99 / &pound;3.49</span></div>
+          <div class="cname">Americano</div>
+          <div class="cdesc">Specialty double espresso shots diluted with hot water for a bold flavor.</div>
+        </div>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="Americano"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+      <div class="mc" data-cat="hotdrink">
+        <div class="cimg"><img src="images/cappuccino_coffee.png" alt="Cappuccino" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x2615;</div>'" /></div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge hidden">&middot;</span><span class="cprice">&pound;2.99 / &pound;3.49</span></div>
+          <div class="cname">Cappuccino</div>
+          <div class="cdesc">Espresso combined with equal parts steamed milk and thick milk foam.</div>
+        </div>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="Cappuccino"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+      <div class="mc" data-cat="hotdrink">
+        <div class="cimg"><img src="images/latte_coffee.png" alt="Latte" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x2615;</div>'" /></div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge">Popular</span><span class="cprice">&pound;2.99 / &pound;3.49</span></div>
+          <div class="cname">Latte</div>
+          <div class="cdesc">A smooth combination of espresso and steamed milk, with a light layer of foam.</div>
+        </div>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="Latte"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+      <div class="mc" data-cat="hotdrink">
+        <div class="cimg"><img src="https://images.unsplash.com/photo-1534778101976-62847782c213?w=500&auto=format&fit=crop&q=80" alt="Mocha Latte" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x2615;</div>'" /></div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge hidden">&middot;</span><span class="cprice">&pound;2.99 / &pound;3.49</span></div>
+          <div class="cname">Mocha Latte</div>
+          <div class="cdesc">Espresso, steamed milk, and rich dark chocolate syrup.</div>
+        </div>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="Mocha Latte"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+      <div class="mc" data-cat="hotdrink">
+        <div class="cimg"><img src="https://images.unsplash.com/photo-1485808191679-5f86510681a2?w=500&auto=format&fit=crop&q=80" alt="Caramel Latte" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x2615;</div>'" /></div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge hidden">&middot;</span><span class="cprice">&pound;2.99 / &pound;3.49</span></div>
+          <div class="cname">Caramel Latte</div>
+          <div class="cdesc">Our smooth latte sweetened with rich caramel syrup.</div>
+        </div>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="Caramel Latte"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+      <div class="mc" data-cat="hotdrink">
+        <div class="cimg"><img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=500&auto=format&fit=crop&q=80" alt="Hazelnut Latte" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x2615;</div>'" /></div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge hidden">&middot;</span><span class="cprice">&pound;2.99 / &pound;3.49</span></div>
+          <div class="cname">Hazelnut Latte</div>
+          <div class="cdesc">Espresso and steamed milk infused with a sweet, nutty hazelnut syrup.</div>
+        </div>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="Hazelnut Latte"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+      <div class="mc" data-cat="hotdrink">
+        <div class="cimg"><img src="https://images.unsplash.com/photo-1572286258217-40142c1c6a70?w=500&auto=format&fit=crop&q=80" alt="Vanilla Latte" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x2615;</div>'" /></div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge hidden">&middot;</span><span class="cprice">&pound;2.99 / &pound;3.49</span></div>
+          <div class="cname">Vanilla Latte</div>
+          <div class="cdesc">A comforting blend of espresso, steamed milk, and sweet vanilla bean syrup.</div>
+        </div>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="Vanilla Latte"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+      <div class="mc" data-cat="hotdrink">
+        <div class="cimg"><img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=500&auto=format&fit=crop&q=80" alt="Tea" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x2615;</div>'" /></div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge">Popular</span><span class="cprice">&pound;1.49</span></div>
+          <div class="cname">Tea (8 Flavors)</div>
+          <div class="cdesc">Freshly brewed tea. Flavors: English Breakfast, Earl Grey, Peppermint, Chamomile, Jasmine, Green, Honey Green, or Lemon &amp; Ginger.</div>
+        </div>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="Specialty Tea"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+
+      <!-- HOUSE SPECIALS -->
+      <div class="mc" data-cat="special">
+        <div class="cimg"><img src="images/caramel_pudding.png" alt="Caramel Pudding" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x2B50;</div>'" /></div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge">Special</span><span class="cprice">&pound;3.49 / &pound;4.99</span></div>
+          <div class="cname">Caramel Pudding</div>
+          <div class="cdesc">Silky smooth custard pudding topped with rich caramelized sugar glaze. Available in Regular or Large.</div>
+        </div>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="Caramel Pudding"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+      <div class="mc" data-cat="special">
+        <div class="cimg"><img src="https://images.unsplash.com/photo-1622597467836-f3285f2131b8?w=500&auto=format&fit=crop&q=80" alt="Fresh Seasonal Fruit Juice" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x2B50;</div>'" /></div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge hidden">&middot;</span><span class="cprice">&pound;4.99</span></div>
+          <div class="cname">Fresh Seasonal Fruit Juice</div>
+          <div class="cdesc">Freshly squeezed seasonal fruits. Thirst-quenching, natural, and full of vitamins.</div>
+        </div>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="Fresh Seasonal Fruit Juice"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+      <div class="mc" data-cat="special">
+        <div class="cimg"><img src="images/pancakes_stack.png" alt="Pancakes" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x2B50;</div>'" /></div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge">Popular</span><span class="cprice">&pound;4.99</span></div>
+          <div class="cname">Pancakes</div>
+          <div class="cdesc">A stack of fluffy, golden buttermilk pancakes served with maple syrup and melted butter.</div>
+        </div>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="Fluffy Pancakes"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+
+      <!-- ICE CREAM -->
+      <div class="mc" data-cat="icecream">
+        <div class="cimg"><img src="images/vanilla_ice_cream.png" alt="Vanilla Ice Cream" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x1F368;</div>'" /></div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge hidden">&middot;</span><span class="cprice">&pound;2.99</span></div>
+          <div class="cname">Vanilla Ice Cream</div>
+          <div class="cdesc">Smooth and creamy classic vanilla bean ice cream scoop.</div>
+        </div>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="Vanilla Ice Cream"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+      <div class="mc" data-cat="icecream">
+        <div class="cimg"><img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=500&auto=format&fit=crop&q=80" alt="Chocolate Ice Cream" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x1F368;</div>'" /></div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge hidden">&middot;</span><span class="cprice">&pound;2.99</span></div>
+          <div class="cname">Chocolate Ice Cream</div>
+          <div class="cdesc">Rich, velvety dark chocolate ice cream scoop.</div>
+        </div>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="Chocolate Ice Cream"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+      <div class="mc" data-cat="icecream">
+        <div class="cimg"><img src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=500&auto=format&fit=crop&q=80" alt="Strawberry Ice Cream" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x1F368;</div>'" /></div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge hidden">&middot;</span><span class="cprice">&pound;2.99</span></div>
+          <div class="cname">Strawberry Ice Cream</div>
+          <div class="cdesc">Sweet and creamy ice cream loaded with strawberry fruit chunks.</div>
+        </div>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="Strawberry Ice Cream"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+      <div class="mc" data-cat="icecream">
+        <div class="cimg"><img src="https://images.unsplash.com/photo-1501443762994-82bd5dace89a?w=500&auto=format&fit=crop&q=80" alt="Mango Ice Cream" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x1F368;</div>'" /></div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge hidden">&middot;</span><span class="cprice">&pound;2.99</span></div>
+          <div class="cname">Mango Ice Cream</div>
+          <div class="cdesc">Refreshing tropical mango pur&eacute;e ice cream scoop.</div>
+        </div>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="Mango Ice Cream"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+      <div class="mc" data-cat="icecream">
+        <div class="cimg"><img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=500&auto=format&fit=crop&q=80" alt="Cookies &amp; Cream Ice Cream" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x1F368;</div>'" /></div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge">Popular</span><span class="cprice">&pound;2.99</span></div>
+          <div class="cname">Cookies &amp; Cream Ice Cream</div>
+          <div class="cdesc">Creamy vanilla ice cream mixed with crunchy crushed Oreo cookies.</div>
+        </div>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="Cookies & Cream Ice Cream"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+      <div class="mc" data-cat="icecream">
+        <div class="cimg"><img src="https://images.unsplash.com/photo-1560008581-09826d1de69e?w=500&auto=format&fit=crop&q=80" alt="Matcha Ice Cream" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x1F368;</div>'" /></div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge">Premium</span><span class="cprice">&pound;3.99</span></div>
+          <div class="cname">Matcha Ice Cream</div>
+          <div class="cdesc">Premium Japanese Uji green tea ice cream scoop. Rich, creamy, and earthy.</div>
+        </div>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="Matcha Ice Cream"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+
+      <!-- MILKSHAKES -->
+      <div class="mc" data-cat="milkshake">
+        <div class="cimg"><img src="images/chocolate_milkshake.png" alt="Ferrero Milkshake" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x1F964;</div>'" /></div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge">Popular</span><span class="cprice">&pound;2.99 / &pound;3.49</span></div>
+          <div class="cname">Ferrero Milkshake</div>
+          <div class="cdesc">Rich, blended milkshake featuring real Ferrero Rocher chocolates and hazelnut.</div>
+        </div>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="Ferrero Milkshake"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+      <div class="mc" data-cat="milkshake">
+        <div class="cimg"><img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=500&auto=format&fit=crop&q=80" alt="KitKat Milkshake" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x1F964;</div>'" /></div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge hidden">&middot;</span><span class="cprice">&pound;2.99 / &pound;3.49</span></div>
+          <div class="cname">KitKat Milkshake</div>
+          <div class="cdesc">Creamy vanilla milkshake blended with crispy KitKat chocolate bars.</div>
+        </div>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="KitKat Milkshake"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+      <div class="mc" data-cat="milkshake">
+        <div class="cimg"><img src="https://images.unsplash.com/photo-1541658016709-82535e94bc69?w=500&auto=format&fit=crop&q=80" alt="Bueno Milkshake" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x1F964;</div>'" /></div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge">Popular</span><span class="cprice">&pound;2.99 / &pound;3.49</span></div>
+          <div class="cname">Bueno Milkshake</div>
+          <div class="cdesc">Gourmet milkshake made with smooth Kinder Bueno bars and chocolate drizzle.</div>
+        </div>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="Bueno Milkshake"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+      <div class="mc" data-cat="milkshake">
+        <div class="cimg"><img src="https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=500&auto=format&fit=crop&q=80" alt="Biscoff Milkshake" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x1F964;</div>'" /></div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge">Popular</span><span class="cprice">&pound;2.99 / &pound;3.49</span></div>
+          <div class="cname">Biscoff Milkshake</div>
+          <div class="cdesc">Creamy shake blended with Lotus Biscoff biscuits and sweet cookie butter syrup.</div>
+        </div>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="Biscoff Milkshake"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+      <div class="mc" data-cat="milkshake">
+        <div class="cimg"><img src="https://images.unsplash.com/photo-1579954115545-a95591f28bfc?w=500&auto=format&fit=crop&q=80" alt="Oreo Milkshake" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x1F964;</div>'" /></div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge hidden">&middot;</span><span class="cprice">&pound;2.99 / &pound;3.49</span></div>
+          <div class="cname">Oreo Milkshake</div>
+          <div class="cdesc">Classic thick milkshake blended with crushed chocolate Oreo cookies.</div>
+        </div>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="Oreo Milkshake"><span>Add to Order</span><span class="ci-btn">+</span></a>
+      </div>
+      <div class="mc" data-cat="milkshake">
+        <div class="cimg"><img src="images/strawberry_milkshake.png" alt="Strawberry Milkshake" loading="lazy" onerror="this.parentElement.innerHTML='<div class=cph-fall>&#x1F964;</div>'" /></div>
+        <div class="cbody">
+          <div class="ctop"><span class="cbadge hidden">&middot;</span><span class="cprice">&pound;2.99 / &pound;3.49</span></div>
+          <div class="cname">Strawberry Milkshake</div>
+          <div class="cdesc">Thick and creamy shake blended with fresh strawberries and sweet strawberry sauce.</div>
+        </div>
+        <a href="javascript:void(0)" class="cadd btn-add-order" data-name="Strawberry Milkshake"><span>Add to Order</span><span class="ci-btn">+</span></a>
       </div>
     </div>
     <!-- Mobile show-more button (only shown on mobile when "all" is selected) -->
     <div class="show-more-wrap" id="showMoreWrap">
       <button class="show-more-btn" id="showMoreBtn" onclick="toggleShowMore()">
         <span id="showMoreTxt">Show all items</span>
-        <span class="show-more-arrow" id="showMoreArrow">↓</span>
+        <span class="show-more-arrow" id="showMoreArrow">â†“</span>
       </button>
     </div>
   </section>
 
-  <!-- Mobile-only: gallery relocated below menu -->
-  <div class="mob-media-below">
-    <div class="gstrip gstrip-mob" id="gallery-mob">
-      <div class="gcell"><img src="images/Playcard 1.png" alt="Clacton On Tea" loading="lazy" />
-        <div class="glabel">Our Vibe</div>
-      </div>
-      <div class="gcell"><img src="images/Playcard 2.png" alt="Take a Break" loading="lazy" />
-        <div class="glabel">Take a Break</div>
-      </div>
-      <div class="gcell"><img src="images/Playcard 3.jpg" alt="Taste" loading="lazy" />
-        <div class="glabel">Taste</div>
-      </div>
+  <div class="gstrip" id="gallery">
+    <div class="gcell"><img src="images/Playcard 1.png" alt="Clacton On Tea" loading="lazy" />
+      <div class="glabel">Our Vibe</div>
+    </div>
+    <div class="gcell"><img src="images/Playcard 2.png" alt="Take a Break" loading="lazy" />
+      <div class="glabel">Take a Break</div>
+    </div>
+    <div class="gcell"><img src="images/Playcard 3.jpg" alt="Taste" loading="lazy" />
+      <div class="glabel">Taste</div>
     </div>
   </div>
 
@@ -488,13 +648,13 @@
     </div>
     <div class="phil-r">
       <div class="pp rv">
-        <div class="ppn">— 001</div>
+        <div class="ppn">â€” 001</div>
         <div class="ppt">Steeped with Care</div>
         <div class="pptx">We treat every leaf with respect, ensuring the perfect balance of flavor and aroma in every
           cup.</div>
       </div>
       <div class="pp rv d2">
-        <div class="ppn">— 002</div>
+        <div class="ppn">â€” 002</div>
         <div class="ppt">Honestly Wholesome</div>
         <div class="pptx">No shortcuts, just real ingredients. We source the best so you can taste the difference.</div>
       </div>
@@ -505,33 +665,32 @@
       <div class="slabel">Ready?</div>
       <h2 class="otitle">Order<br>Right Now</h2>
       <p class="osub">Available for takeaway and delivery. Get your favorites delivered across Clacton-on-Sea.</p>
-      <a href="https://www.foodpanda.com.bd/restaurant/wb7l/pizzaburg-narayanganj" target="_blank" class="btn-dk">Order
-        on Foodpanda</a>
+      <a href="tel:+441255123456" class="btn-dk">Call to Order</a>
     </div>
     <div class="ord-r">
       <div class="slabel" style="margin-bottom:8px;">Good to know</div>
-      <div class="oi"><span class="oic">📍</span>
-        <div>
+      <div class="oi"><span class="oic">ðŸ“</span>
+         <div>
           <div class="oit">Location</div>
           <div class="oix">16 Rosemary Rd, Clacton-on-Sea, CO15 1NZ</div>
         </div>
       </div>
-      <div class="oi"><span class="oic">🛵</span>
+      <div class="oi"><span class="oic">ðŸ›µ</span>
         <div>
           <div class="oit">Delivery</div>
           <div class="oix">Fast delivery across Clacton-on-Sea and surrounding areas</div>
         </div>
       </div>
-      <div class="oi"><span class="oic">🕐</span>
+      <div class="oi"><span class="oic">ðŸ•</span>
         <div>
           <div class="oit">Hours</div>
-          <div class="oix">Open daily — check Foodpanda for live availability</div>
+          <div class="oix">Open daily â€” 11:00 AM to 9:00 PM</div>
         </div>
       </div>
-      <div class="oi"><span class="oic">💳</span>
+      <div class="oi"><span class="oic">ðŸ’³</span>
         <div>
           <div class="oit">Payment</div>
-          <div class="oix">Cash on delivery, cards — all accepted</div>
+          <div class="oix">Cash on delivery, cards â€” all accepted</div>
         </div>
       </div>
     </div>
@@ -540,16 +699,16 @@
     <div class="ftop">
       <div>
         <div class="fbrand">Clacton On Tea</div>
-        <div class="ftag">Bold flavors, honest ingredients, unforgettable meals — crafted in Clacton-on-Sea.</div>
+        <div class="ftag">Bold flavors, premium ingredients, unforgettable sips â€” crafted in Clacton-on-Sea.</div>
       </div>
       <div>
         <div class="fct">Menu</div>
         <ul class="flinks">
-          <li><a href="#menu">Milk Tea</a></li>
-          <li><a href="#menu">Fruit Tea</a></li>
+          <li><a href="#menu">Milk Teas</a></li>
+          <li><a href="#menu">Fruit Teas</a></li>
           <li><a href="#menu">Matcha</a></li>
-          <li><a href="#menu">Coffee</a></li>
-          <li><a href="#menu">Pancakes</a></li>
+          <li><a href="#menu">Brown Sugar</a></li>
+          <li><a href="#menu">Hot Drinks</a></li>
         </ul>
       </div>
       <div>
@@ -569,7 +728,7 @@
       </div>
     </div>
     <div class="fbot">
-      <div class="fcp">© 2026 Clacton On Tea. Clacton-on-Sea, United Kingdom.</div>
+      <div class="fcp">Â© 2026 Clacton On Tea. Clacton-on-Sea, United Kingdom.</div>
       <div class="fsoc"><a href="#">Instagram</a><a href="#">Facebook</a><a href="#">TikTok</a></div>
     </div>
   </footer>

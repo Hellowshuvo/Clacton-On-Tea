@@ -74,3 +74,22 @@ window.addEventListener('resize',function(){applyMobileLimit(document.querySelec
 var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target);}});},{threshold:.08});
 document.querySelectorAll('.rv').forEach(function(el){obs.observe(el);});
 setTimeout(function(){document.querySelectorAll('.hero .rv').forEach(function(el){el.classList.add('vis');});},80);
+
+var toastTimeout;
+function showToast(msg) {
+  var t = document.getElementById('toast');
+  if(!t) return;
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toastTimeout);
+  toastTimeout = setTimeout(function(){t.classList.remove('show');}, 2500);
+}
+
+document.addEventListener('click', function(e) {
+  var addBtn = e.target.closest('.btn-add-order');
+  if(addBtn) {
+    e.preventDefault();
+    var name = addBtn.getAttribute('data-name');
+    showToast(name + ' added to tray!');
+  }
+});
