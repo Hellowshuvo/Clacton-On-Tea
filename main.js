@@ -1,8 +1,5 @@
 function toggleTheme(){var h=document.documentElement,d=h.getAttribute('data-theme')==='dark';h.setAttribute('data-theme',d?'light':'dark');document.getElementById('tlbl').textContent=d?'Dark':'Light';}
-var cur=document.getElementById('cur'),ring=document.getElementById('ring'),mx=0,my=0,rx=0,ry=0;
-document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';});
-(function loop(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(loop);})();
-document.querySelectorAll('a,button,.ci,.mc,.toggle,.chip,.show-more-btn').forEach(function(el){el.addEventListener('mouseenter',function(){cur.classList.add('hovered');ring.classList.add('hovered');});el.addEventListener('mouseleave',function(){cur.classList.remove('hovered');ring.classList.remove('hovered');});});
+
 
 var showingAll=false;
 var MOBILE_LIMIT=10;

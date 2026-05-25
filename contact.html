@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Clacton On Tea</title>
+  <meta name="description" content="Get in touch with Clacton On Tea. Find our location, contact number, social media, and hygiene rating.">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400;1,600&family=Google+Sans:wght@300;400;500;700&family=Google+Sans+Display:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Google Sans', sans-serif;
+      color: #fff;
+      min-height: 100vh;
+      overflow-x: hidden;
+      background: #0b0b0b;
+    }
+
+    /* ======== ANIMATED BEACH-VIBE GRADIENT BACKGROUND ======== */
+    .bg-canvas {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      background: 
+        linear-gradient(135deg, 
+          #0f2027 0%, 
+          #203a43 15%, 
+          #2c5364 30%, 
+          #1a6b5a 45%, 
+          #2e8b7a 55%,
+          #f0a07c 70%, 
+          #f7c59f 80%, 
+          #f2a65a 90%, 
+          #c94b4b 100%
+        );
+      background-size: 400% 400%;
+      animation: beachShift 18s ease infinite;
+    }
+
+    .bg-canvas::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 20% 80%, rgba(255, 154, 108, 0.35) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(72, 202, 228, 0.25) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 60%);
+      animation: blobMove 12s ease-in-out infinite alternate;
+    }
+
+    .bg-canvas::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 70% 90%, rgba(247, 197, 159, 0.3) 0%, transparent 40%),
+        radial-gradient(ellipse at 10% 30%, rgba(44, 83, 100, 0.4) 0%, transparent 45%);
+      animation: blobMove2 15s ease-in-out infinite alternate;
+    }
+
+    @keyframes beachShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes blobMove {
+      0% { transform: translate(0, 0) scale(1); }
+      100% { transform: translate(30px, -20px) scale(1.05); }
+    }
+
+    @keyframes blobMove2 {
+      0% { transform: translate(0, 0) scale(1); }
+      100% { transform: translate(-20px, 15px) scale(1.08); }
+    }
+
+    /* ======== WAVE SVG AT BOTTOM ======== */
+    .wave-container {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .wave-container svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    /* ======== CONTENT WRAPPER ======== */
+    .content {
+      position: relative;
+      z-index: 1;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    /* ======== TOP NAV ======== */
+    .top-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 50px;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 15px;
+      letter-spacing: .03em;
+      padding: 10px 20px;
+      border-radius: 30px;
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.15);
+      transition: all 0.3s ease;
+    }
+
+    .back-link:hover {
+      background: rgba(255,255,255,0.22);
+      transform: translateX(-4px);
+    }
+
+    .back-link svg {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .brand-name {
+      font-family: 'Google Sans Display', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+    /* ======== PAGE HEADER ======== */
+    .page-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .page-header h1 {
+      font-family: 'Google Sans Display', sans-serif;
+      font-size: clamp(36px, 6vw, 56px);
+      font-weight: 700;
+      letter-spacing: -.02em;
+      margin-bottom: 8px;
+      text-shadow: 0 4px 16px rgba(0,0,0,0.25);
+    }
+
+    .page-header h1 span {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .page-header p {
+      font-size: 17px;
+      opacity: 0.85;
+      max-width: 480px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* ======== CARD GRID ======== */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      padding: 32px;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      margin-bottom: 18px;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(5px);
+    }
+
+    .card h3 {
+      font-family: 'Google Sans Display', sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      letter-spacing: -.01em;
+    }
+
+    .card p, .card a {
+      font-size: 15px;
+      line-height: 1.6;
+      opacity: 0.9;
+    }
+
+    .card a {
+      color: #ffd6a0;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .card a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    /* ======== SOCIAL LINKS ======== */
+    .social-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 18px 22px;
+      border-radius: 16px;
+      text-decoration: none;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .social-link:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-3px) scale(1.01);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+    }
+
+    .social-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .social-icon.fb { background: linear-gradient(135deg, #1877f2, #0d47a1); }
+    .social-icon.ig { background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+    .social-icon.tk { background: linear-gradient(135deg, #010101, #25f4ee, #fe2c55); }
+    .social-icon.web { background: linear-gradient(135deg, #2c5364, #0f2027); }
+
+    .social-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .social-text strong {
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: .01em;
+    }
+
+    .social-text span {
+      font-size: 13px;
+      opacity: 0.7;
+      margin-top: 2px;
+    }
+
+    /* ======== HYGIENE RATING CARD ======== */
+    .hygiene-card {
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 20px;
+      padding: 32px;
+      text-align: center;
+      margin-bottom: 40px;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .hygiene-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .hygiene-card h3 {
+      font-family: 'Google Sans Display', sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .hygiene-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: linear-gradient(135deg, #00703c, #00a651);
+      padding: 16px 32px;
+      border-radius: 14px;
+      margin-bottom: 12px;
+    }
+
+    .hygiene-badge .rating-text {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      opacity: 0.9;
+    }
+
+    .hygiene-badge .rating-number {
+      font-family: 'Google Sans Display', sans-serif;
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .hygiene-sub {
+      font-size: 13px;
+      opacity: 0.7;
+      margin-top: 8px;
+    }
+
+    /* ======== MAP SECTION ======== */
+    .map-section {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      overflow: hidden;
+      margin-bottom: 40px;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .map-section:hover {
+      transform: translateY(-3px);
+    }
+
+    .map-header {
+      padding: 24px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .map-header h3 {
+      font-family: 'Google Sans Display', sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .map-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: 30px;
+      background: rgba(255,255,255,0.18);
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .map-btn:hover {
+      background: rgba(255,255,255,0.28);
+      transform: scale(1.03);
+    }
+
+    .map-btn svg {
+      width: 16px;
+      height: 16px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .map-embed {
+      width: 100%;
+      height: 350px;
+      border: none;
+      display: block;
+    }
+
+    /* ======== FOOTER ======== */
+    .contact-footer {
+      text-align: center;
+      padding: 30px 0 10px;
+      font-size: 13px;
+      opacity: 0.6;
+    }
+
+    /* ======== RESPONSIVE ======== */
+    @media (max-width: 768px) {
+      .content { padding: 24px 16px 60px; }
+      .card-grid { grid-template-columns: 1fr; }
+      .social-grid { grid-template-columns: 1fr; }
+      .top-nav { flex-direction: column; gap: 12px; align-items: flex-start; }
+      .map-embed { height: 260px; }
+      .page-header { margin-bottom: 36px; }
+      .hygiene-badge .rating-number { font-size: 34px; }
+    }
+
+    /* ======== ENTRANCE ANIMATIONS ======== */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(24px);
+      animation: fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+    .delay-3 { animation-delay: 0.3s; }
+    .delay-4 { animation-delay: 0.4s; }
+    .delay-5 { animation-delay: 0.5s; }
+    .delay-6 { animation-delay: 0.6s; }
+    .delay-7 { animation-delay: 0.7s; }
+    .delay-8 { animation-delay: 0.8s; }
+  </style>
+</head>
+<body>
+
+  <!-- Animated beach-vibe gradient background -->
+  <div class="bg-canvas"></div>
+
+  <!-- Decorative wave at bottom -->
+  <div class="wave-container">
+    <svg viewBox="0 0 1440 200" preserveAspectRatio="none">
+      <path fill="rgba(255,255,255,0.06)" d="M0,120 C360,200 720,40 1080,120 C1260,160 1380,100 1440,80 L1440,200 L0,200 Z"/>
+      <path fill="rgba(255,255,255,0.03)" d="M0,160 C320,100 640,200 960,140 C1200,100 1360,170 1440,140 L1440,200 L0,200 Z"/>
+    </svg>
+  </div>
+
+  <div class="content">
+
+    <!-- Top Navigation -->
+    <nav class="top-nav fade-up">
+      <a href="index.html" class="back-link">
+        <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+        Back to Home
+      </a>
+      <div class="brand-name">Clacton On Tea</div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header fade-up delay-1">
+      <h1>Get in <span>Touch</span></h1>
+      <p>Visit us at Clacton-on-Sea or reach out through any of our channels below. We'd love to hear from you!</p>
+    </div>
+
+    <!-- Info Cards -->
+    <div class="card-grid">
+
+      <!-- Location Card -->
+      <div class="card fade-up delay-2">
+        <div class="card-icon">📍</div>
+        <h3>Our Location</h3>
+        <p>16 Rosemary Road<br>Clacton-on-Sea<br>Essex, CO15 1NZ<br>United Kingdom</p>
+      </div>
+
+      <!-- Contact Card -->
+      <div class="card fade-up delay-3">
+        <div class="card-icon">📞</div>
+        <h3>Call Us</h3>
+        <p><a href="tel:+441255123456">+44 1255 123 456</a></p>
+        <p style="margin-top: 8px; font-size: 13px; opacity: 0.7;">Available during opening hours<br>Mon – Sun</p>
+      </div>
+
+      <!-- Opening Hours Card -->
+      <div class="card fade-up delay-4">
+        <div class="card-icon">🕐</div>
+        <h3>Opening Hours</h3>
+        <p>Monday – Friday: 10am – 8pm<br>Saturday: 10am – 9pm<br>Sunday: 11am – 7pm</p>
+      </div>
+
+    </div>
+
+    <!-- Social Media Links -->
+    <h3 style="font-family: 'Google Sans Display', sans-serif; font-size: 20px; font-weight: 600; margin-bottom: 16px; text-shadow: 0 2px 8px rgba(0,0,0,0.2);" class="fade-up delay-4">Follow Us</h3>
+    <div class="social-grid">
+
+      <a href="https://www.facebook.com/people/Clacton-On-Tea/61589541659594/" target="_blank" rel="noopener noreferrer" class="social-link fade-up delay-4">
+        <div class="social-icon fb">📘</div>
+        <div class="social-text">
+          <strong>Facebook</strong>
+          <span>@ClactonOnTea</span>
+        </div>
+      </a>
+
+      <a href="https://www.instagram.com/clactonontea" target="_blank" rel="noopener noreferrer" class="social-link fade-up delay-5">
+        <div class="social-icon ig">📸</div>
+        <div class="social-text">
+          <strong>Instagram</strong>
+          <span>@clactonontea</span>
+        </div>
+      </a>
+
+      <a href="https://www.tiktok.com/@clactononteauk" target="_blank" rel="noopener noreferrer" class="social-link fade-up delay-6">
+        <div class="social-icon tk">🎵</div>
+        <div class="social-text">
+          <strong>TikTok</strong>
+          <span>@clactononteauk</span>
+        </div>
+      </a>
+
+      <a href="index.html" class="social-link fade-up delay-7">
+        <div class="social-icon web">🌐</div>
+        <div class="social-text">
+          <strong>Website</strong>
+          <span>clactonontea.co.uk</span>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- UK Hygiene Rating -->
+    <div class="hygiene-card fade-up delay-5">
+      <h3>🇬🇧 UK Food Hygiene Rating</h3>
+      <div class="hygiene-badge">
+        <div>
+          <div class="rating-text">Food Hygiene<br>Rating</div>
+        </div>
+        <div class="rating-number">5</div>
+      </div>
+      <p class="hygiene-sub">Rated by the Food Standards Agency &middot; Very Good</p>
+    </div>
+
+    <!-- Google Maps Embed & Link -->
+    <div class="map-section fade-up delay-6">
+      <div class="map-header">
+        <h3>📍 Find Us on the Map</h3>
+        <a href="https://maps.app.goo.gl/7yKs5Ueg3sqaUPq29" target="_blank" rel="noopener noreferrer" class="map-btn">
+          <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          Open in Google Maps
+        </a>
+      </div>
+      <iframe 
+        class="map-embed" 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2467.0!2d1.1543!3d51.7900!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d96f9c3ed9a8ab%3A0x0!2s16+Rosemary+Rd%2C+Clacton-on-Sea+CO15+1NZ!5e0!3m2!1sen!2suk!4v1700000000000!5m2!1sen!2suk"
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+    <!-- Footer -->
+    <div class="contact-footer fade-up delay-8">
+      &copy; 2026 Clacton On Tea &middot; Clacton-on-Sea, United Kingdom
+    </div>
+
+  </div>
+
+</body>
+</html>
