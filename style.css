@@ -1159,6 +1159,52 @@ body.menu-open {
   transition: color var(--t);
 }
 
+.pp-hygiene-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  background: linear-gradient(135deg, #005a30 0%, #008741 100%);
+  border: 1px solid rgba(0, 255, 120, 0.2);
+  padding: 8px 16px;
+  border-radius: 10px;
+  margin-top: 6px;
+  max-width: fit-content;
+  box-shadow: 0 4px 12px rgba(0, 135, 65, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pp:hover .pp-hygiene-badge {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 135, 65, 0.25);
+}
+
+.pp-hygiene-badge .badge-label {
+  display: flex;
+  flex-direction: column;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  color: #fff;
+  line-height: 1.25;
+  text-align: left;
+}
+
+.pp-hygiene-badge .badge-score {
+  font-family: 'Google Sans Display', sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+}
+
+.pp-hygiene-caption {
+  font-size: 11px;
+  color: var(--fg2);
+  opacity: 0.65;
+  margin-top: 2px;
+  transition: color var(--t);
+}
+
 .ord {
   display: grid;
   grid-template-columns: 1fr 1fr;

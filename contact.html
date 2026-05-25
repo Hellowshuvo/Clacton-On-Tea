@@ -11,93 +11,52 @@
 
     body {
       font-family: 'Google Sans', sans-serif;
-      color: #fff;
+      color: #ffb8b8;
       min-height: 100vh;
       overflow-x: hidden;
-      background: #0b0b0b;
+      background: #fe4f4f;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 24px;
     }
 
-    /* ======== ANIMATED BEACH-VIBE GRADIENT BACKGROUND ======== */
+    /* ======== BACKGROUND ======== */
     .bg-canvas {
       position: fixed;
       inset: 0;
       z-index: 0;
-      background: 
-        linear-gradient(135deg, 
-          #0f2027 0%, 
-          #203a43 15%, 
-          #2c5364 30%, 
-          #1a6b5a 45%, 
-          #2e8b7a 55%,
-          #f0a07c 70%, 
-          #f7c59f 80%, 
-          #f2a65a 90%, 
-          #c94b4b 100%
-        );
-      background-size: 400% 400%;
-      animation: beachShift 18s ease infinite;
+      background-color: #fe4f4f;
+      background-image:
+        /* Subtle halftone dotted overlay */
+        radial-gradient(rgba(0, 0, 0, 0.08) 1.5px, transparent 1.5px),
+        /* Organic blob pattern (repeating base64 SVG) */
+        url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgNDAwIiB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCI+CiAgPHBhdGggZD0iTS0yMCw4MCBDMzAsMTIwIDcwLDMwIDEyMCw4MCBTMTgwLDEzMCAyMjAsODAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMzUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgb3BhY2l0eT0iMC4wNiIvPgogIDxwYXRoIGQ9Ik0zMjAsLTEwIEMzODAsNTAgMzUwLDEyMCAzMDAsMTYwIFMyNjAsMjQwIDMyMCwzMDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMzUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgb3BhY2l0eT0iMC4wNiIvPgogIDxwYXRoIGQ9Ik04MCwyNDAgUTE1MCwxODAgMjAwLDI1MCBUMjgwLDIyMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIzNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBvcGFjaXR5PSIwLjA2Ii8+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSIzNTAiIHI9IjIwIiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC4wNiIvPgogIDxjaXJjbGUgY3g9IjI1MCIgY3k9IjMwIiByPSIxNSIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuMDYiLz4KICA8cGF0aCBkPSJNLTEwLDIwMCBDNDAsMjQwIDIwLDMyMCA4MCwzMjAgUzE1MCwyODAgMTgwLDM1MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIzNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBvcGFjaXR5PSIwLjA1Ii8+CiAgPHBhdGggZD0iTTE1MCwtMjAgUTIwMCw1MCAxNTAsMTEwIFQxMDAsMjAwIiBmaWxsPSJub25lIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjM1IiBzdHJva2UtbGluZWNhcD0icm91bmQiIG9wYWNpdHk9IjAuMDUiLz4KICA8cGF0aCBkPSJNMjYwLDM1MCBRMzIwLDM4MCAzODAsMzIwIFQ0MjAsMjQwIiBmaWxsPSJub25lIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjM1IiBzdHJva2UtbGluZWNhcD0icm91bmQiIG9wYWNpdHk9IjAuMDUiLz4KICA8Y2lyY2xlIGN4PSIzODAiIGN5PSI4MCIgcj0iMTgiIGZpbGw9ImJsYWNrIiBvcGFjaXR5PSIwLjA1Ii8+CiAgPGNpcmNsZSBjeD0iMTUwIiBjeT0iMTUwIiByPSIyMiIgZmlsbD0iYmxhY2siIG9wYWNpdHk9IjAuMDUiLz4KPC9zdmc+"),
+        /* Premium ambient lighting gradients (shining from corners & center) */
+        radial-gradient(circle at 15% 15%, rgba(255, 130, 130, 0.4) 0%, transparent 45%),
+        radial-gradient(circle at 85% 85%, rgba(255, 160, 160, 0.35) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, #fe4f4f 0%, #aa1c1c 100%);
+      background-size: 14px 14px, 320px 320px, cover, cover, cover;
+      background-repeat: repeat, repeat, no-repeat, no-repeat, no-repeat;
     }
 
-    .bg-canvas::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(ellipse at 20% 80%, rgba(255, 154, 108, 0.35) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 20%, rgba(72, 202, 228, 0.25) 0%, transparent 50%),
-        radial-gradient(ellipse at 50% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 60%);
-      animation: blobMove 12s ease-in-out infinite alternate;
-    }
-
-    .bg-canvas::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(ellipse at 70% 90%, rgba(247, 197, 159, 0.3) 0%, transparent 40%),
-        radial-gradient(ellipse at 10% 30%, rgba(44, 83, 100, 0.4) 0%, transparent 45%);
-      animation: blobMove2 15s ease-in-out infinite alternate;
-    }
-
-    @keyframes beachShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    @keyframes blobMove {
-      0% { transform: translate(0, 0) scale(1); }
-      100% { transform: translate(30px, -20px) scale(1.05); }
-    }
-
-    @keyframes blobMove2 {
-      0% { transform: translate(0, 0) scale(1); }
-      100% { transform: translate(-20px, 15px) scale(1.08); }
-    }
-
-    /* ======== WAVE SVG AT BOTTOM ======== */
+    /* ======== WAVE SVG AT BOTTOM (HIDDEN) ======== */
     .wave-container {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      z-index: 0;
-      pointer-events: none;
-    }
-
-    .wave-container svg {
-      display: block;
-      width: 100%;
-      height: auto;
+      display: none;
     }
 
     /* ======== CONTENT WRAPPER ======== */
     .content {
       position: relative;
       z-index: 1;
-      max-width: 1100px;
+      max-width: 1000px;
+      width: 100%;
       margin: 0 auto;
-      padding: 40px 24px 80px;
+      padding: 60px 48px;
+      background: #2b0404;
+      border-radius: 28px;
+      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
+      border: 1px solid rgba(254, 79, 79, 0.15);
     }
 
     /* ======== TOP NAV ======== */
@@ -112,22 +71,22 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      color: #fff;
+      color: #fe4f4f;
       text-decoration: none;
-      font-weight: 500;
+      font-weight: 600;
       font-size: 15px;
       letter-spacing: .03em;
       padding: 10px 20px;
       border-radius: 30px;
-      background: rgba(255,255,255,0.12);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(254, 79, 79, 0.08);
+      border: 1px solid rgba(254, 79, 79, 0.2);
       transition: all 0.3s ease;
     }
 
     .back-link:hover {
-      background: rgba(255,255,255,0.22);
+      background: rgba(254, 79, 79, 0.15);
+      border-color: rgba(254, 79, 79, 0.35);
+      color: #ff7d7d;
       transform: translateX(-4px);
     }
 
@@ -136,7 +95,7 @@
       height: 18px;
       fill: none;
       stroke: currentColor;
-      stroke-width: 2;
+      stroke-width: 2.5;
       stroke-linecap: round;
       stroke-linejoin: round;
     }
@@ -146,6 +105,7 @@
       font-size: 22px;
       font-weight: 700;
       letter-spacing: .02em;
+      color: #fe4f4f;
       text-shadow: 0 2px 8px rgba(0,0,0,0.3);
     }
 
@@ -159,21 +119,22 @@
       font-family: 'Google Sans Display', sans-serif;
       font-size: clamp(36px, 6vw, 56px);
       font-weight: 700;
+      color: #fe4f4f;
       letter-spacing: -.02em;
-      margin-bottom: 8px;
-      text-shadow: 0 4px 16px rgba(0,0,0,0.25);
+      margin-bottom: 12px;
     }
 
     .page-header h1 span {
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
-      font-weight: 400;
+      font-family: inherit;
+      font-style: normal;
+      font-weight: inherit;
+      color: inherit;
     }
 
     .page-header p {
       font-size: 17px;
-      opacity: 0.85;
-      max-width: 480px;
+      color: #ffb8b8;
+      max-width: 520px;
       margin: 0 auto;
       line-height: 1.6;
     }
@@ -181,68 +142,142 @@
     /* ======== CARD GRID ======== */
     .card-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 24px;
       margin-bottom: 40px;
     }
 
     .card {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: linear-gradient(135deg, rgba(254, 79, 79, 0.05) 0%, rgba(254, 79, 79, 0.01) 100%);
+      border: 1px solid rgba(254, 79, 79, 0.15);
       border-radius: 20px;
       padding: 32px;
-      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.4s ease;
     }
 
     .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
+      transform: translateY(-6px);
+      border-color: rgba(254, 79, 79, 0.4);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(254, 79, 79, 0.15);
     }
 
     .card-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 14px;
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 22px;
-      margin-bottom: 18px;
-      background: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(5px);
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, rgba(254, 79, 79, 0.12) 0%, rgba(254, 79, 79, 0.02) 100%);
+      color: #fe4f4f;
+      border: 1px solid rgba(254, 79, 79, 0.25);
+      box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.05);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .card:hover .card-icon {
+      transform: scale(1.08);
+      border-color: rgba(254, 79, 79, 0.5);
+      box-shadow: 0 0 15px rgba(254, 79, 79, 0.25), inset 0 2px 4px rgba(255, 255, 255, 0.1);
+      color: #ff7d7d;
     }
 
     .card h3 {
       font-family: 'Google Sans Display', sans-serif;
       font-size: 20px;
       font-weight: 600;
-      margin-bottom: 6px;
+      color: #fe4f4f;
+      margin-bottom: 12px;
       letter-spacing: -.01em;
     }
 
     .card p, .card a {
       font-size: 15px;
       line-height: 1.6;
-      opacity: 0.9;
     }
 
     .card a {
-      color: #ffd6a0;
+      color: #ff8e8e;
       text-decoration: none;
       transition: color 0.2s;
+      font-weight: 500;
     }
 
     .card a:hover {
-      color: #fff;
+      color: #fe4f4f;
       text-decoration: underline;
+    }
+
+    /* Card inner custom styling */
+    .card-address span {
+      display: block;
+      color: #ffcccc;
+      font-weight: 400;
+      opacity: 0.9;
+    }
+
+    .card-phone {
+      font-size: 18px !important;
+      font-weight: 700;
+    }
+
+    .card-phone a {
+      color: #fe4f4f !important;
+      transition: color 0.3s;
+    }
+
+    .card-phone a:hover {
+      color: #ff8e8e !important;
+      text-decoration: none !important;
+    }
+
+    .card-subtext {
+      font-size: 13px !important;
+      color: #ffcccc;
+      opacity: 0.7;
+      margin-top: 8px;
+    }
+
+    .hours-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    .hours-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+      color: #ffcccc;
+      opacity: 0.9;
+      border-bottom: 1px dashed rgba(254, 79, 79, 0.1);
+      padding-bottom: 4px;
+    }
+
+    .hours-list li:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .hours-list .day {
+      font-weight: 500;
+    }
+
+    .hours-list .time {
+      font-weight: 600;
+      color: #fe4f4f;
     }
 
     /* ======== SOCIAL LINKS ======== */
     .social-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 16px;
       margin-bottom: 40px;
     }
@@ -250,22 +285,48 @@
     .social-link {
       display: flex;
       align-items: center;
-      gap: 14px;
-      padding: 18px 22px;
+      gap: 16px;
+      padding: 16px 20px;
       border-radius: 16px;
       text-decoration: none;
-      color: #fff;
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #ffb8b8;
+      background: linear-gradient(135deg, rgba(254, 79, 79, 0.04) 0%, rgba(254, 79, 79, 0.01) 100%);
+      border: 1px solid rgba(254, 79, 79, 0.12);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
       transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    .social-link:hover {
-      background: rgba(255, 255, 255, 0.2);
-      transform: translateY(-3px) scale(1.01);
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+    .social-link.fb:hover {
+      background: linear-gradient(135deg, rgba(24, 119, 242, 0.12) 0%, rgba(24, 119, 242, 0.04) 100%);
+      border-color: rgba(24, 119, 242, 0.4);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25), 0 0 20px rgba(24, 119, 242, 0.2);
+      color: #fff;
+      transform: translateY(-4px);
+    }
+
+    .social-link.ig:hover {
+      background: linear-gradient(135deg, rgba(220, 39, 67, 0.12) 0%, rgba(220, 39, 67, 0.04) 100%);
+      border-color: rgba(220, 39, 67, 0.4);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25), 0 0 20px rgba(220, 39, 67, 0.2);
+      color: #fff;
+      transform: translateY(-4px);
+    }
+
+    .social-link.tk:hover {
+      background: linear-gradient(135deg, rgba(254, 44, 85, 0.12) 0%, rgba(254, 44, 85, 0.04) 100%);
+      border-color: rgba(254, 44, 85, 0.4);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25), 0 0 20px rgba(254, 44, 85, 0.2);
+      color: #fff;
+      transform: translateY(-4px);
+    }
+
+    .social-link.web:hover {
+      background: linear-gradient(135deg, rgba(254, 79, 79, 0.12) 0%, rgba(254, 79, 79, 0.04) 100%);
+      border-color: rgba(254, 79, 79, 0.4);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25), 0 0 20px rgba(254, 79, 79, 0.2);
+      color: #fff;
+      transform: translateY(-4px);
     }
 
     .social-icon {
@@ -275,14 +336,19 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 20px;
       flex-shrink: 0;
+      transition: all 0.3s ease;
     }
 
-    .social-icon.fb { background: linear-gradient(135deg, #1877f2, #0d47a1); }
-    .social-icon.ig { background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
-    .social-icon.tk { background: linear-gradient(135deg, #010101, #25f4ee, #fe2c55); }
-    .social-icon.web { background: linear-gradient(135deg, #2c5364, #0f2027); }
+    .social-link.fb .social-icon { background: rgba(24, 119, 242, 0.12); color: #1877f2; border: 1px solid rgba(24, 119, 242, 0.25); }
+    .social-link.ig .social-icon { background: rgba(220, 39, 67, 0.12); color: #dc2743; border: 1px solid rgba(220, 39, 67, 0.25); }
+    .social-link.tk .social-icon { background: rgba(254, 44, 85, 0.12); color: #fe2c55; border: 1px solid rgba(254, 44, 85, 0.25); }
+    .social-link.web .social-icon { background: rgba(254, 79, 79, 0.12); color: #fe4f4f; border: 1px solid rgba(254, 79, 79, 0.25); }
+
+    .social-link.fb:hover .social-icon { background: #1877f2; color: #fff; border-color: #1877f2; transform: scale(1.05); }
+    .social-link.ig:hover .social-icon { background: #dc2743; color: #fff; border-color: #dc2743; transform: scale(1.05); }
+    .social-link.tk:hover .social-icon { background: #fe2c55; color: #fff; border-color: #fe2c55; transform: scale(1.05); }
+    .social-link.web:hover .social-icon { background: #fe4f4f; color: #fff; border-color: #fe4f4f; transform: scale(1.05); }
 
     .social-text {
       display: flex;
@@ -293,75 +359,32 @@
       font-size: 15px;
       font-weight: 600;
       letter-spacing: .01em;
+      color: #fe4f4f;
+      transition: color 0.3s ease;
+    }
+
+    .social-link:hover .social-text strong {
+      color: #fff;
     }
 
     .social-text span {
       font-size: 13px;
+      color: #ffcccc;
       opacity: 0.7;
       margin-top: 2px;
+      transition: opacity 0.3s ease;
     }
 
-    /* ======== HYGIENE RATING CARD ======== */
-    .hygiene-card {
-      background: rgba(255, 255, 255, 0.12);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      border-radius: 20px;
-      padding: 32px;
-      text-align: center;
-      margin-bottom: 40px;
-      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    .social-link:hover .social-text span {
+      opacity: 1.0;
     }
 
-    .hygiene-card:hover {
-      transform: translateY(-4px);
-    }
 
-    .hygiene-card h3 {
-      font-family: 'Google Sans Display', sans-serif;
-      font-size: 20px;
-      font-weight: 600;
-      margin-bottom: 16px;
-    }
-
-    .hygiene-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      background: linear-gradient(135deg, #00703c, #00a651);
-      padding: 16px 32px;
-      border-radius: 14px;
-      margin-bottom: 12px;
-    }
-
-    .hygiene-badge .rating-text {
-      font-size: 14px;
-      font-weight: 600;
-      letter-spacing: .06em;
-      text-transform: uppercase;
-      opacity: 0.9;
-    }
-
-    .hygiene-badge .rating-number {
-      font-family: 'Google Sans Display', sans-serif;
-      font-size: 42px;
-      font-weight: 700;
-      line-height: 1;
-    }
-
-    .hygiene-sub {
-      font-size: 13px;
-      opacity: 0.7;
-      margin-top: 8px;
-    }
 
     /* ======== MAP SECTION ======== */
     .map-section {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: #390707;
+      border: 1px solid rgba(254, 79, 79, 0.15);
       border-radius: 20px;
       overflow: hidden;
       margin-bottom: 40px;
@@ -370,6 +393,7 @@
 
     .map-section:hover {
       transform: translateY(-3px);
+      border-color: rgba(254, 79, 79, 0.35);
     }
 
     .map-header {
@@ -385,6 +409,7 @@
       font-family: 'Google Sans Display', sans-serif;
       font-size: 20px;
       font-weight: 600;
+      color: #fe4f4f;
     }
 
     .map-btn {
@@ -393,17 +418,19 @@
       gap: 8px;
       padding: 10px 20px;
       border-radius: 30px;
-      background: rgba(255,255,255,0.18);
-      color: #fff;
+      background: rgba(254, 79, 79, 0.08);
+      color: #fe4f4f;
       text-decoration: none;
       font-size: 14px;
       font-weight: 500;
       transition: all 0.3s ease;
-      border: 1px solid rgba(255,255,255,0.15);
+      border: 1px solid rgba(254, 79, 79, 0.2);
     }
 
     .map-btn:hover {
-      background: rgba(255,255,255,0.28);
+      background: rgba(254, 79, 79, 0.18);
+      border-color: rgba(254, 79, 79, 0.35);
+      color: #ff8e8e;
       transform: scale(1.03);
     }
 
@@ -430,14 +457,21 @@
       padding: 30px 0 10px;
       font-size: 13px;
       opacity: 0.6;
+      color: #ffb8b8;
     }
 
     /* ======== RESPONSIVE ======== */
     @media (max-width: 768px) {
-      .content { padding: 24px 16px 60px; }
+      body {
+        padding: 16px 12px;
+      }
+      .content { 
+        padding: 40px 24px; 
+        margin: 0 auto;
+      }
       .card-grid { grid-template-columns: 1fr; }
       .social-grid { grid-template-columns: 1fr; }
-      .top-nav { flex-direction: column; gap: 12px; align-items: flex-start; }
+      .top-nav { flex-direction: column; gap: 16px; align-items: center; text-align: center; }
       .map-embed { height: 260px; }
       .page-header { margin-bottom: 36px; }
       .hygiene-badge .rating-number { font-size: 34px; }
@@ -499,24 +533,47 @@
 
       <!-- Location Card -->
       <div class="card fade-up delay-2">
-        <div class="card-icon">📍</div>
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+        </div>
         <h3>Our Location</h3>
-        <p>16 Rosemary Road<br>Clacton-on-Sea<br>Essex, CO15 1NZ<br>United Kingdom</p>
+        <p class="card-address">
+          <span>16 Rosemary Road</span>
+          <span>Clacton-on-Sea</span>
+          <span>Essex, CO15 1NZ</span>
+          <span>United Kingdom</span>
+        </p>
       </div>
 
       <!-- Contact Card -->
       <div class="card fade-up delay-3">
-        <div class="card-icon">📞</div>
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+        </div>
         <h3>Call Us</h3>
-        <p><a href="tel:+441255123456">+44 1255 123 456</a></p>
-        <p style="margin-top: 8px; font-size: 13px; opacity: 0.7;">Available during opening hours<br>Mon – Sun</p>
+        <p class="card-phone"><a href="tel:+441255123456">+44 1255 123 456</a></p>
+        <p class="card-subtext">Available during opening hours &bull; Mon &ndash; Sun</p>
       </div>
 
       <!-- Opening Hours Card -->
       <div class="card fade-up delay-4">
-        <div class="card-icon">🕐</div>
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+        </div>
         <h3>Opening Hours</h3>
-        <p>Monday – Friday: 10am – 8pm<br>Saturday: 10am – 9pm<br>Sunday: 11am – 7pm</p>
+        <ul class="hours-list">
+          <li><span class="day">Mon &ndash; Fri</span><span class="time">10am &ndash; 8pm</span></li>
+          <li><span class="day">Saturday</span><span class="time">10am &ndash; 9pm</span></li>
+          <li><span class="day">Sunday</span><span class="time">11am &ndash; 7pm</span></li>
+        </ul>
       </div>
 
     </div>
@@ -525,32 +582,52 @@
     <h3 style="font-family: 'Google Sans Display', sans-serif; font-size: 20px; font-weight: 600; margin-bottom: 16px; text-shadow: 0 2px 8px rgba(0,0,0,0.2);" class="fade-up delay-4">Follow Us</h3>
     <div class="social-grid">
 
-      <a href="https://www.facebook.com/people/Clacton-On-Tea/61589541659594/" target="_blank" rel="noopener noreferrer" class="social-link fade-up delay-4">
-        <div class="social-icon fb">📘</div>
+      <a href="https://www.facebook.com/people/Clacton-On-Tea/61589541659594/" target="_blank" rel="noopener noreferrer" class="social-link fb fade-up delay-4">
+        <div class="social-icon fb">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+            <path d="M9.101 23.656v-10.74H6.13V9.502h2.971V7.004c0-2.946 1.7-4.582 4.417-4.582 1.3 0 2.66.232 2.66.232v2.926h-1.5c-1.46 0-1.917.907-1.917 1.838v2.204h3.3l-.527 3.414h-2.773v10.74h-4.17z"/>
+          </svg>
+        </div>
         <div class="social-text">
           <strong>Facebook</strong>
           <span>@ClactonOnTea</span>
         </div>
       </a>
 
-      <a href="https://www.instagram.com/clactonontea" target="_blank" rel="noopener noreferrer" class="social-link fade-up delay-5">
-        <div class="social-icon ig">📸</div>
+      <a href="https://www.instagram.com/clactonontea" target="_blank" rel="noopener noreferrer" class="social-link ig fade-up delay-5">
+        <div class="social-icon ig">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+        </div>
         <div class="social-text">
           <strong>Instagram</strong>
           <span>@clactonontea</span>
         </div>
       </a>
 
-      <a href="https://www.tiktok.com/@clactononteauk" target="_blank" rel="noopener noreferrer" class="social-link fade-up delay-6">
-        <div class="social-icon tk">🎵</div>
+      <a href="https://www.tiktok.com/@clactononteauk" target="_blank" rel="noopener noreferrer" class="social-link tk fade-up delay-6">
+        <div class="social-icon tk">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+            <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.02 1.7 4.17 1.12 1.15 2.67 1.78 4.24 1.85v3.7c-1.74-.03-3.44-.64-4.82-1.75-.12-.1-.23-.21-.34-.32v6.82a7.5 7.5 0 1 1-6-7.35v3.91a3.6 3.6 0 1 0 2.1 3.44V0z"/>
+          </svg>
+        </div>
         <div class="social-text">
           <strong>TikTok</strong>
           <span>@clactononteauk</span>
         </div>
       </a>
 
-      <a href="index.html" class="social-link fade-up delay-7">
-        <div class="social-icon web">🌐</div>
+      <a href="index.html" class="social-link web fade-up delay-7">
+        <div class="social-icon web">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+        </div>
         <div class="social-text">
           <strong>Website</strong>
           <span>clactonontea.co.uk</span>
@@ -559,22 +636,11 @@
 
     </div>
 
-    <!-- UK Hygiene Rating -->
-    <div class="hygiene-card fade-up delay-5">
-      <h3>🇬🇧 UK Food Hygiene Rating</h3>
-      <div class="hygiene-badge">
-        <div>
-          <div class="rating-text">Food Hygiene<br>Rating</div>
-        </div>
-        <div class="rating-number">5</div>
-      </div>
-      <p class="hygiene-sub">Rated by the Food Standards Agency &middot; Very Good</p>
-    </div>
 
     <!-- Google Maps Embed & Link -->
     <div class="map-section fade-up delay-6">
       <div class="map-header">
-        <h3>📍 Find Us on the Map</h3>
+        <h3>Find Us on the Map</h3>
         <a href="https://maps.app.goo.gl/7yKs5Ueg3sqaUPq29" target="_blank" rel="noopener noreferrer" class="map-btn">
           <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
           Open in Google Maps
